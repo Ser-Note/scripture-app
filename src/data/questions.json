@@ -1,0 +1,429 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Defending the Faith",
+      "description": "Questions about Catholic beliefs and practices"
+    },
+    {
+      "id": 2,
+      "name": "Prayer & Spirituality",
+      "description": "Growing closer to God through prayer"
+    },
+    {
+      "id": 3,
+      "name": "Morality & Living Virtuously",
+      "description": "How to live according to God's will"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "question": "Why do Catholics pray to Mary?",
+      "answer": "Catholics don't worship Mary, but honor her and ask for her intercession. Just as we ask friends to pray for us, we ask Mary to pray for us.",
+      "scriptures": [
+        {
+          "reference": "John 2:1-5",
+          "text": "At the wedding at Cana, Mary intercedes for the couple: 'They have no wine.' Then she tells the servants, 'Do whatever he tells you.'"
+        },
+        {
+          "reference": "Luke 1:48",
+          "text": "Mary herself prophesies: 'All generations will call me blessed.'"
+        },
+        {
+          "reference": "Revelation 12:17",
+          "text": "The dragon is angry with the woman (Mary) and goes off to wage war on 'the rest of her offspring'—those who keep God's commandments."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "question": "Where is the Catholic Church in the Bible?",
+      "answer": "Jesus established the Church with Peter as its foundation and gave it authority to teach and forgive sins.",
+      "scriptures": [
+        {
+          "reference": "Matthew 16:18-19",
+          "text": "Jesus said: 'You are Peter, and upon this rock I will build my church, and the gates of hell shall not prevail against it. I will give you the keys of the kingdom of heaven.'"
+        },
+        {
+          "reference": "1 Timothy 3:15",
+          "text": "Paul calls the Church 'the pillar and foundation of truth.'"
+        },
+        {
+          "reference": "John 20:21-23",
+          "text": "Jesus breathed on them and said: 'Receive the Holy Spirit. Whose sins you forgive are forgiven them.'"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "categoryId": 2,
+      "question": "How should I pray when I feel distant from God?",
+      "answer": "Even when we feel dry in prayer, God is still present. Persist in prayer and trust that God hears you.",
+      "scriptures": [
+        {
+          "reference": "Psalm 22:1-2",
+          "text": "Even Jesus quoted this: 'My God, my God, why have you forsaken me? Why are you so far from helping me? O my God, I cry by day, but you do not answer.'"
+        },
+        {
+          "reference": "Romans 8:26",
+          "text": "The Spirit helps us in our weakness. We do not know what we ought to pray for, but the Spirit intercedes for us."
+        },
+        {
+          "reference": "Luke 18:1",
+          "text": "Jesus told them a parable about the need to pray always and not lose heart."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "categoryId": 3,
+      "question": "How do I resist temptation?",
+      "answer": "Through prayer, Scripture, and the sacraments, especially Confession and the Eucharist.",
+      "scriptures": [
+        {
+          "reference": "1 Corinthians 10:13",
+          "text": "No temptation has overtaken you that is not common to man. God is faithful, and he will not let you be tempted beyond your ability, but with the temptation he will also provide the way of escape."
+        },
+        {
+          "reference": "James 4:7",
+          "text": "Submit yourselves therefore to God. Resist the devil, and he will flee from you."
+        },
+        {
+          "reference": "Matthew 26:41",
+          "text": "Watch and pray that you may not enter into temptation. The spirit indeed is willing, but the flesh is weak."
+        }
+      ]
+    },
+    {
+        "id": 5,
+        "categoryId": 2,
+        "question": "Why is faith alone not enough for salvation?",
+        "answer": "Faith is essential for salvation, but it must be accompanied by works. True faith produces good works as its fruit. At the end of the day, the devil also believes in God, but that faith does not save him. It's what he does with that faith that matters.",
+        "scriptures": [
+          {
+            "reference": "James 2:17",
+            "text": "So also faith by itself, if it does not have works, is dead."
+          },
+          {
+            "reference": "Matthew 7:21",
+            "text": "Not everyone who says to me, 'Lord, Lord,' will enter the kingdom of heaven, but the one who does the will of my Father who is in heaven."
+          },
+          {
+            "reference": "Ephesians 2:8-10",
+            "text": "For by grace you have been saved through faith, and that not of yourselves; it is the gift of God, not of works, lest anyone should boast. For we are His workmanship, created in Christ Jesus for good works, which God prepared beforehand that we should walk in them."
+          }
+        ]
+    },
+    {
+        "id": 6,
+        "categoryId": 1,
+        "question": "If God is all-powerful, why does he allow suffering?",
+        "answer": "God allows suffering for reasons that are often beyond our understanding. It can lead to spiritual growth, compassion, and a deeper relationship with Him. Suffering can also be a test of our faith and character.",
+        "scriptures": [
+          {
+            "reference": "Romans 5:3-5",
+            "text": "Not only that, but we rejoice in our sufferings, knowing that suffering produces endurance, and endurance produces character, and character produces hope."
+          },
+          {
+            "reference": "2 Corinthians 1:3-4",
+            "text": "Blessed be the God and Father of our Lord Jesus Christ, the Father of mercies and God of all comfort, who comforts us in all our affliction."
+          },
+          {
+            "reference": "James 1:2-4",
+            "text": "Count it all joy, my brothers, when you meet trials of various kinds, for you know that the testing of your faith produces steadfastness."
+          },
+          {
+            "reference": "Job 1:21",
+            "text": "The Lord gave, and the Lord has taken away; blessed be the name of the Lord."
+          }
+        ]
+    },
+    {
+        "id": 7,
+        "categoryId": 1,
+        "question": "How can a loving God send anyone to Hell?",
+        "answer": "God's desire is for all to be saved, but He respects our free will. Hell is a consequence of rejecting God's love and mercy. Meaning, we choose our eternal destiny through our actions and choices in this life.",
+        "scriptures": [
+          {
+            "reference": "2 Peter 3:9",
+            "text": "The Lord is not slow to fulfill his promise as some count slowness, but is patient toward you, not wishing that any should perish, but that all should reach repentance."
+          },
+          {
+            "reference": "Matthew 25:41",
+            "text": "Then he will say to those on his left, 'Depart from me, you cursed, into the eternal fire prepared for the devil and his angels.'"
+          },
+          {
+            "reference": "Revelation 20:15",
+            "text": "And if anyone's name was not found written in the book of life, he was thrown into the lake of fire."
+          }
+        ]
+    },
+    {
+        "id": 8,
+        "categoryId": 2,
+        "question": "Can my works soley get me into heaven?",
+        "answer": "No, salvation is a gift from God that we receive through faith in Jesus Christ. While good works are important and demonstrate our faith, they cannot earn us salvation on their own. Works are only the fruit of your faith, the Lord does not care for any of your works if you do not have faith in Him.",
+        "scriptures": [
+          {
+            "reference": "Ephesians 2:8-9",
+            "text": "For by grace you have been saved through faith, and that not of yourselves; it is the gift of God, not of works, lest anyone should boast."
+          },
+          {
+            "reference": "Titus 3:5",
+            "text": "He saved us, not because of works done by us in righteousness, but according to his own mercy."
+          },
+          {
+            "reference": "Philippians 2:12-13",
+            "text": "Work out your own salvation with fear and trembling, for it is God who works in you, both to will and to work for his good pleasure."
+          }
+        ]
+    },
+    {
+        "id": 9,
+        "categoryId": 3,
+        "question": "How can I combat Lustful thoughts?",
+        "answer": "This is a common misconception in the bible, as nowhere in it does it state that lustful thoughts or actions are fended by combat. The Lord calls you to flee from lust, not to fight it. How that may look may vary, but it is important to remember that you are not alone in this struggle and that God's grace is sufficient to help you overcome temptation.",
+        "scriptures": [
+          {
+            "reference": "1 Corinthians 6:18",
+            "text": "Flee from sexual immorality. Every other sin a person commits is outside the body, but the sexually immoral person sins against his own body."
+          },
+          {
+            "reference": "Matthew 5:28",
+            "text": "But I say to you that everyone who looks at a woman with lustful intent has already committed adultery with her in his heart."
+          },
+          {
+            "reference": "2 Timothy 2:22",
+            "text": "So flee youthful passions and pursue righteousness, faith, love, and peace, along with those who call on the Lord from a pure heart."
+          }
+        ]
+    },
+    {
+        "id": 10,
+        "categoryId": 1,
+        "question": "Can we trust the bible is true and not corrupted?",
+        "answer": "Yes, we can trust that the Bible is true and has been preserved from corruption. The Bible has been carefully transmitted through generations, and the core message of salvation through Jesus Christ remains intact. The Bible was written by 40 different authors over a span of 1,500 years, yet it maintains a consistent message and theme throughout.",
+        "scriptures": [
+            {
+                "reference": "Psalm 119:160",
+                "text": "The sum of your word is truth, and every one of your righteous rules endures forever."
+            },
+            {
+                "reference": "Proverbs 30:5",
+                "text": "Every word of God proves true; he is a shield to those who take refuge in him."
+            },
+            {
+                "reference": "Isaiah 40:8",
+                "text": "The grass withers, the flower fades, but the word of our God will stand forever."
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "categoryId": 2,
+        "question": "Was Jesus a Jew?",
+        "answer": "Yes, Jesus was a Jew both ethnically and religiously. He was born into a Jewish family, observed Jewish customs, and taught in synagogues. However, Jesus believed in the laws of Moses, like the pharises. He did not come to abolish the law or just follow it, but to fulfill it, unlike all Jews at the time who simply followed it.",
+        "scriptures": [
+            {
+                "reference": "Matthew 5:17",
+                "text": "Do not think that I have come to abolish the Law or the Prophets; I have not come to abolish them but to fulfill them."
+            },
+            {
+                "reference": "Luke 2:21",
+                "text": "And at the end of eight days, when he was circumcised, he was called Jesus, the name given by the angel before he was conceived in the womb."
+            },
+            {
+                "reference": "John 4:22",
+                "text": "You worship what you do not know; we worship what we know, for salvation is from the Jews."
+            },
+            {
+                "reference": "John 1:17",
+                "text": "For the law was given by Moses, but grace and truth came by Jesus Christ."
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "categoryId": 3,
+        "question": "Who are the true children of God?",
+        "answer": "The true children of God are those who believe in Jesus Christ and follow His teachings. They are born of God and live according to His will. This is often confused with physical descent, but spiritual descent through faith is what truly matters. The people who live in Israel at the time of Jesus were not considered the true children of God because they rejected Him as the Messiah.",
+        "scriptures": [
+            {
+                "reference": "John 1:12-13",
+                "text": "But to all who did receive him, who believed in his name, he gave the right to become children of God, who were born, not of blood nor of the will of the flesh nor of the will of man, but of God."
+            },
+            {
+                "reference": "Galatians 3:26",
+                "text": "For in Christ Jesus you are all sons of God, through faith."
+            },
+            {
+                "reference": "Romans 8:14",
+                "text": "For all who are led by the Spirit of God are sons of God."
+            },
+            {
+                "reference": "Matthew 12:48-50",
+                "text": "But he replied to the man who told him, 'Who is my mother, and who are my brothers?' And stretching out his hand toward his disciples, he said, 'Here are my mother and my brothers! For whoever does the will of my Father in heaven is my brother and sister and mother.'"
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "categoryId": 3,
+        "question": "How can I overcome past sin?",
+        "answer": "Overcoming past sin involves sincere repentance, seeking God's forgiveness, and making amends where possible. It is important to remember that God's grace is sufficient to cover all sins, and through faith in Jesus Christ, we can be made new. Jesus even stated that He came to call sinners, not the righteous, and even forgets our sins when we repent.",
+        "scriptures": [
+            {
+                "reference": "1 John 1:9",
+                "text": "If we confess our sins, he is faithful and just to forgive us our sins and to cleanse us from all unrighteousness."
+            },
+            {
+                "reference": "Isaiah 1:18",
+                "text": "'Come now, let us reason together,' says the Lord. 'Though your sins are like scarlet, they shall be as white as snow; though they are red like crimson, they shall become like wool.'"
+            },
+            {
+                "reference": "2 Corinthians 5:17",
+                "text": "Therefore, if anyone is in Christ, he is a new creation. The old has passed away; behold, the new has come."
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "categoryId": 2,
+        "question": "How can I align work with faith?",
+        "answer": "You can align your work with your faith by viewing your job as am opportunity to serve others, just as Jesus did. Seek every instance in a way to glorify Him in everything you do.",
+        "scriptures": [
+            {
+                "reference": "Colossians 3:23-24",
+                "text": "Whatever you do, work heartily, as for the Lord and not for men, knowing that from the Lord you will receive the inheritance as your reward. You are serving the Lord Christ."
+            },
+            {
+                "reference": "1 Corinthians 10:31",
+                "text": "So, whether you eat or drink, or whatever you do, do all to the glory of God."
+            },
+            {
+                "reference": "Ephesians 6:7-8",
+                "text": "Rendering service with a good will as to the Lord and not to men, knowing that whatever good anyone does, this he will receive back from the Lord, whether he is a bondservant or is free."
+            }   
+        ]
+    },
+    {
+        "id": 15,
+        "categoryId": 1,
+        "question": "What does it mean to be religious and why do I have to be religious?",
+        "answer": "A lot of people believe being religious means following a set of rules or rituals, but at its core, being religious is about having a relationship with God and living according to His will. It involves faith, worship, and moral living. Being religious helps us grow closer to God, find purpose in life, and live in a way that reflects His love and teachings. It's also a beautiful, natural way to communicate with others who share your beliefs, fostering a sense of community and support.",
+        "scriptures": [
+            {
+                "reference": "James 1:27",
+                "text": "Religion that is pure and undefiled before God, the Father, is this: to visit orphans and widows in their affliction, and to keep oneself unstained from the world."
+            },
+            {
+                "reference": "Matthew 22:37-39",
+                "text": "And he said to him, 'You shall love the Lord your God with all your heart and with all your soul and with all your mind.' This is the great and first commandment. And a second is like it: 'You shall love your neighbor as yourself.'"
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "categoryId": 3,
+        "question": "I'm new to my faith, how or where should I start learning?",
+        "answer": "Starting your faith journey can be both exciting and overwhelming. A good starting point is to read the Bible, beginning with the Gospels (Matthew, Mark, Luke, and John) to learn about the life and teachings of Jesus Christ. Additionally, consider joining a local church or faith community where you can connect with others, attend services, and participate in study groups. Don't hesitate to ask questions and seek guidance from more experienced believers or clergy members. Prayer is also essential; ask God for wisdom and understanding as you grow in your faith. Social events like Youth Groups or Bible Studies can also be great ways to learn and connect with others on the same journey. Just remember, you're not alone, and God is with you every step of the way.",
+        "scriptures": [
+            {
+                "reference": "2 Timothy 3:16-17",
+                "text": "All Scripture is breathed out by God and profitable for teaching, for reproof, for correction, and for training in righteousness, that the man of God may be complete, equipped for every good work."
+            },
+            {
+                "reference": "Proverbs 3:5-6",
+                "text": "Trust in the Lord with all your heart, and do not lean on your own understanding. In all your ways acknowledge him, and he will make straight your paths."
+            },
+            {
+                "reference": "Hebrews 10:24-25",
+                "text": "And let us consider how to stir up one another to love and good works, not neglecting to meet together, as is the habit of some, but encouraging one another, and all the more as you see the Day drawing near."
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "categoryId": 2,
+        "question": "How can I hear God's voice?",
+        "answer": "Hearing God's voice often requires quieting our minds and hearts to be receptive to His guidance. This can be achieved through regular prayer, meditation on Scripture, and spending time in silence. God may speak to us through the Bible, through the counsel of wise believers, or through a sense of peace about a decision. It's important to be patient and open, as God's timing and methods may differ from our expectations.",
+        "scriptures": [
+            {
+                "reference": "John 10:27",
+                "text": "My sheep hear my voice, and I know them, and they follow me."
+            },
+            {
+                "reference": "Psalm 46:10",
+                "text": "Be still, and know that I am God."
+            },
+            {
+                "reference": "Isaiah 30:21",
+                "text": "And your ears shall hear a word behind you, saying, 'This is the way, walk in it,' when you turn to the right or when you turn to the left."
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "categoryId": 3,
+        "question": "Why are there so many denominations?",
+        "answer": "The existence of many denominations within Christianity can be attributed to a variety of factors, including differing interpretations of Scripture, cultural influences, historical events, and theological disagreements. As the Church has grown and spread across different regions and cultures, various groups have emerged, each emphasizing different aspects of the faith. While this diversity can lead to confusion, it also reflects the richness of the Christian tradition and the ways in which the Gospel can be understood and lived out in different contexts.",
+        "scriptures": [
+            {
+                "reference": "1 Corinthians 1:10",
+                "text": "I appeal to you, brothers, by the name of our Lord Jesus Christ, that all of you agree, and that there be no divisions among you, but that you be united in the same mind and the same judgment."
+            },
+            {
+                "reference": "Ephesians 4:4-6",
+                "text": "There is one body and one Spirit—just as you were called to the one hope that belongs to your call—one Lord, one faith, one baptism, one God and Father of all, who is over all and through all and in all."
+            },
+            {
+                "reference": "Romans 14:1",
+                "text": "As for the one who is weak in faith, welcome him, but not to quarrel over opinions."
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "category": 2,
+        "question": "How do I align faith and my relationship to the person I love?",
+        "answer": "The most important aspect of building faith into your relationship is the foundation being the Lord. Nothing good will come from it if there is a division in one partner from the Lord, once the Lord sees said division, he will not bless the relationship. Pray together, attend church together, and discuss your faith openly to ensure you are both on the same page spiritually. This shared spiritual foundation can strengthen your bond and help you navigate challenges together.",
+        "scriptures": [
+            {
+                "reference": "2 Corinthians 6:14",
+                "text": "Do not be unequally yoked with unbelievers. For what partnership has righteousness with lawlessness? Or what fellowship has light with darkness?"
+            },
+            {
+                "reference": "Ecclesiastes 4:12",
+                "text": "Though one may be overpowered, two can defend themselves. A cord of three strands is not quickly broken."
+            },
+            {
+                "reference": "Colossians 3:16",
+                "text": "Let the word of Christ dwell in you richly, teaching and admonishing one another in all wisdom, singing psalms and hymns and spiritual songs, with thankfulness in your hearts to God."
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "categoryId": 1,
+        "question": "What is the difference between a pastor, preist, and preacher?",
+        "answer": "A pastor is a general term for a spiritual leader who shepherds a congregation, often used in Protestant denominations. A priest is a specific role in the Catholic, Orthodox, and some Anglican churches, responsible for administering sacraments and leading worship. A preacher is someone who delivers sermons or messages, which can be a role held by pastors, priests, or other religious leaders.",
+        "scriptures": [
+            {
+                "reference": "1 Peter 5:2-3",
+                "text": "Shepherd the flock of God that is among you, exercising oversight, not under compulsion, but willingly, as God would have you; not for shameful gain, but eagerly; not domineering over those in your charge, but being examples to the flock."
+            },
+            {
+                "reference": "Hebrews 5:1-4",
+                "text": "Every high priest chosen from among men is appointed to act on behalf of men in relation to God, to offer gifts and sacrifices for sins. He can deal gently with the ignorant and wayward, since he himself is beset with weakness. Because of this he is obligated to offer sacrifice for his own sins just as he does for those of the people. And no one takes this honor for himself, but only when called by God, just as Aaron was."
+            },
+            {
+                "reference": "Romans 10:14-15",
+                "text": "How then will they call on him in whom they have not believed? And how are they to believe in him of whom they have never heard? And how are they to hear without someone preaching? And how are they to preach unless they are sent? As it is written, 'How beautiful are the feet of those who preach the good news!'"
+            }
+        ]
+    }
+  ]
+}
