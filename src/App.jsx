@@ -14,6 +14,8 @@ function App() {
   const [favorites, setFavorites] = useState([])
   const [isLoaded, setIsLoaded] = useState(false)
 
+  const [mode, setMode] = useState('questions')
+
   const toggleFavorite = (questionId) => 
   {
     if (favorites.includes(questionId)) 
@@ -67,7 +69,36 @@ function App() {
         <p>Strengthen your faith with God's Word</p>
       </header>
 
-      {/* SEARCH & FILTER SECTION */}
+      <nav className="mode-nav">
+        <button
+          className={mode === 'questions' ? 'mode-btn active' : 'mode-btn'}
+          onClick={() => setMode('questions')}
+        >
+        📖 Questions
+        </button>
+        <button
+          className={mode === 'dissect' ? 'mode-btn active' : 'mode-btn'}
+          onClick={() => setMode('dissect')}
+        >
+          🔍 Study
+        </button>
+        <button
+          className={mode === 'memory' ? 'mode-btn active' : 'mode-btn'}
+          onClick={() => setMode('memory')}
+        >
+          🧠 Memory
+        </button>
+        <button
+          className={mode === 'quiz' ? 'mode-btn active' : 'mode-btn'}
+          onClick={() => setMode('quiz')}
+        >
+          ❓ Quiz
+        </button>
+      </nav>
+
+    {mode === 'questions' && (
+      <>
+       {/* SEARCH & FILTER SECTION */}
       <div className="controls">
         <SearchBar 
           searchTerm={searchTerm} 
@@ -95,11 +126,37 @@ function App() {
           ))
         )}
       </main>
+      </>
+    )}
 
-      {/* FOOTER WITH FEEDBACK */}
-      <footer className="app-footer">
-        <p>Have a question not answered here? <button className="feedback-link" onClick={() => setIsFeedbackOpen(true)}>Send feedback</button></p>
-      </footer>
+    {mode === 'dissect' && (
+        <main className="mode-container">
+          <h2>📖 Scripture Dissection</h2>
+        <p>Dissection Mode Coming Soon!</p>
+        </main>
+    )}
+
+    {mode === 'memory' && (
+        <main className="mode-container">
+          <h2>🧠 Memory Verses</h2>
+        <p>Memory Game Coming Soon!</p>
+        </main>
+    )}
+
+        {mode === 'quiz' && (
+        <main className="mode-container">
+          <h2>❓ Quiz Mode</h2>
+        <p>Quiz Mode Coming Soon!</p>
+        </main>
+    )}
+     
+
+      <button
+        className="floating-feedback-btn"
+        onClick={() => setIsFeedbackOpen(true)}
+      >
+        <img src="/AppImages/favicon.png" alt="Feedback" />
+      </button>
 
       {/* FEEDBACK MODAL */}
       <FeedbackModal 

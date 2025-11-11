@@ -1,0 +1,260 @@
+{
+  "quizzes": [
+    {
+      "id": 1,
+      "question": "Which verse teaches us to be still and trust that God is in control?",
+      "options": [
+        {
+          "reference": "Psalm 46:10",
+          "simplified": "Be calm and recognize God's sovereignty",
+          "text": "Be still and know that I am God",
+          "correct": true
+        },
+        {
+          "reference": "Philippians 4:13",
+          "simplified": "We can accomplish anything through Christ's strength",
+          "text": "I can do all things through Christ who strengthens me",
+          "correct": false
+        },
+        {
+          "reference": "Matthew 11:28",
+          "simplified": "Jesus offers rest to the exhausted",
+          "text": "Come to me, all you who are weary and burdened",
+          "correct": false
+        },
+        {
+          "reference": "Joshua 1:9",
+          "simplified": "Don't be afraid because God is always with you",
+          "text": "Be strong and courageous... the Lord your God will be with you",
+          "correct": false
+        }
+      ],
+      "explanation": "Psalm 46:10 is God's call to stop striving and trust in His sovereignty. It reminds us to pause and remember who God is.",
+      "category": "Trust"
+    },
+    {
+      "id": 2,
+      "question": "Which verse is known as the 'Gospel in a nutshell' about God's love?",
+      "options": [
+        {
+          "reference": "John 3:16",
+          "simplified": "God loved the world so much He sent Jesus to save us",
+          "text": "For God so loved the world that he gave his one and only Son",
+          "correct": true
+        },
+        {
+          "reference": "Romans 8:28",
+          "simplified": "Everything works together for the good of believers",
+          "text": "In all things God works for the good of those who love him",
+          "correct": false
+        },
+        {
+          "reference": "1 Corinthians 13:4",
+          "simplified": "Love is patient and kind",
+          "text": "Love is patient, love is kind",
+          "correct": false
+        },
+        {
+          "reference": "1 John 4:8",
+          "simplified": "God's very nature is love",
+          "text": "God is love",
+          "correct": false
+        }
+      ],
+      "explanation": "John 3:16 is perhaps the most well-known verse in the Bible, summarizing the entire gospel message of salvation through faith in Jesus.",
+      "category": "Salvation"
+    },
+    {
+      "id": 3,
+      "question": "Which verse promises that God has good plans for your future?",
+      "options": [
+        {
+          "reference": "Jeremiah 29:11",
+          "simplified": "God has plans to prosper you and give you hope",
+          "text": "For I know the plans I have for you... plans to give you hope and a future",
+          "correct": true
+        },
+        {
+          "reference": "Proverbs 3:5-6",
+          "simplified": "Trust God completely and He will guide your path",
+          "text": "Trust in the Lord with all your heart... and he will make your paths straight",
+          "correct": false
+        },
+        {
+          "reference": "Romans 8:28",
+          "simplified": "Everything works out for believers' good",
+          "text": "In all things God works for the good of those who love him",
+          "correct": false
+        },
+        {
+          "reference": "Isaiah 40:31",
+          "simplified": "Those who trust God will be renewed in strength",
+          "text": "Those who hope in the Lord will renew their strength",
+          "correct": false
+        }
+      ],
+      "explanation": "Jeremiah 29:11 was originally spoken to exiled Israelites, but it applies to all believers - God has purposeful, hope-filled plans for His people.",
+      "category": "Hope"
+    },
+    {
+      "id": 4,
+      "question": "Which verse describes what true love looks like?",
+      "options": [
+        {
+          "reference": "1 Corinthians 13:4-5",
+          "simplified": "Love is patient, kind, not envious, not boastful, and keeps no record of wrongs",
+          "text": "Love is patient, love is kind. It does not envy, it does not boast...",
+          "correct": true
+        },
+        {
+          "reference": "John 3:16",
+          "simplified": "God demonstrated His love by sending Jesus",
+          "text": "For God so loved the world that he gave his one and only Son",
+          "correct": false
+        },
+        {
+          "reference": "John 15:13",
+          "simplified": "The greatest love is sacrificing your life for friends",
+          "text": "Greater love has no one than this: to lay down one's life for one's friends",
+          "correct": false
+        },
+        {
+          "reference": "Romans 5:8",
+          "simplified": "God showed His love by Christ dying for sinners",
+          "text": "But God demonstrates his own love for us in this: While we were still sinners, Christ died for us",
+          "correct": false
+        }
+      ],
+      "explanation": "1 Corinthians 13 is often called the 'Love Chapter' and defines what biblical, agape love truly looks like in action.",
+      "category": "Love"
+    },
+    {
+      "id": 5,
+      "question": "Which verse promises God's presence wherever you go?",
+      "options": [
+        {
+          "reference": "Joshua 1:9",
+          "simplified": "Be courageous because God is with you everywhere",
+          "text": "Be strong and courageous... for the Lord your God will be with you wherever you go",
+          "correct": true
+        },
+        {
+          "reference": "Matthew 28:20",
+          "simplified": "Jesus promises to be with us always, until the end",
+          "text": "And surely I am with you always, to the very end of the age",
+          "correct": false
+        },
+        {
+          "reference": "Psalm 139:7",
+          "simplified": "You cannot go anywhere away from God's Spirit",
+          "text": "Where can I go from your Spirit? Where can I flee from your presence?",
+          "correct": false
+        },
+        {
+          "reference": "Deuteronomy 31:6",
+          "simplified": "God will never leave or abandon you",
+          "text": "The Lord your God... will never leave you nor forsake you",
+          "correct": false
+        }
+      ],
+      "explanation": "God spoke these words to Joshua as he was about to lead Israel into the Promised Land. It's a powerful reminder of God's constant presence.",
+      "category": "Courage"
+    },
+    {
+      "id": 6,
+      "question": "Which verse tells us to trust God instead of our own understanding?",
+      "options": [
+        {
+          "reference": "Proverbs 3:5-6",
+          "simplified": "Trust God completely, not your own wisdom, and He'll direct you",
+          "text": "Trust in the Lord with all your heart and lean not on your own understanding",
+          "correct": true
+        },
+        {
+          "reference": "Psalm 46:10",
+          "simplified": "Be still and recognize God's authority",
+          "text": "Be still and know that I am God",
+          "correct": false
+        },
+        {
+          "reference": "Isaiah 55:9",
+          "simplified": "God's ways are higher than human ways",
+          "text": "As the heavens are higher than the earth, so are my ways higher than your ways",
+          "correct": false
+        },
+        {
+          "reference": "James 1:5",
+          "simplified": "Ask God for wisdom and He'll give it generously",
+          "text": "If any of you lacks wisdom, you should ask God",
+          "correct": false
+        }
+      ],
+      "explanation": "Proverbs 3:5-6 is a foundational verse about faith - trusting God's wisdom over our limited human understanding.",
+      "category": "Trust"
+    },
+    {
+      "id": 7,
+      "question": "Which verse compares God to a shepherd who provides everything?",
+      "options": [
+        {
+          "reference": "Psalm 23:1",
+          "simplified": "The Lord is my shepherd, so I have everything I need",
+          "text": "The Lord is my shepherd, I lack nothing",
+          "correct": true
+        },
+        {
+          "reference": "John 10:11",
+          "simplified": "Jesus is the good shepherd who dies for His sheep",
+          "text": "I am the good shepherd. The good shepherd lays down his life for the sheep",
+          "correct": false
+        },
+        {
+          "reference": "Philippians 4:19",
+          "simplified": "God will supply all your needs from His riches",
+          "text": "And my God will meet all your needs according to the riches of his glory",
+          "correct": false
+        },
+        {
+          "reference": "Matthew 6:26",
+          "simplified": "God feeds the birds, so surely He'll care for you",
+          "text": "Look at the birds of the air... your heavenly Father feeds them",
+          "correct": false
+        }
+      ],
+      "explanation": "Psalm 23 is one of the most beloved psalms, using the shepherd metaphor to describe God's tender care and provision.",
+      "category": "Provision"
+    },
+    {
+      "id": 8,
+      "question": "Which verse promises that everything works together for believers' good?",
+      "options": [
+        {
+          "reference": "Romans 8:28",
+          "simplified": "God works all circumstances for the good of those who love Him",
+          "text": "And we know that in all things God works for the good of those who love him",
+          "correct": true
+        },
+        {
+          "reference": "Jeremiah 29:11",
+          "simplified": "God has prosperous plans for your future",
+          "text": "For I know the plans I have for you... plans to give you hope and a future",
+          "correct": false
+        },
+        {
+          "reference": "Philippians 1:6",
+          "simplified": "God will complete the good work He started in you",
+          "text": "He who began a good work in you will carry it on to completion",
+          "correct": false
+        },
+        {
+          "reference": "James 1:17",
+          "simplified": "Every good gift comes from God",
+          "text": "Every good and perfect gift is from above",
+          "correct": false
+        }
+      ],
+      "explanation": "Romans 8:28 is a powerful promise that God sovereignly orchestrates all events for the ultimate good of His children.",
+      "category": "Trust"
+    }
+  ]
+}

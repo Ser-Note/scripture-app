@@ -1,0 +1,100 @@
+{
+  "memoryVerses": [
+    {
+      "id": 1,
+      "reference": "Psalm 46:10",
+      "text": "Be still and know that I am God",
+      "difficulty": "easy",
+      "category": "Trust",
+      "hint": "Starts with 'Be still'"
+    },
+    {
+      "id": 2,
+      "reference": "Proverbs 3:5",
+      "text": "Trust in the Lord with all your heart and lean not on your own understanding",
+      "difficulty": "medium",
+      "category": "Trust",
+      "hint": "About trusting God, not yourself"
+    },
+    {
+      "id": 3,
+      "reference": "John 3:16",
+      "text": "For God so loved the world that he gave his one and only Son that whoever believes in him shall not perish but have eternal life",
+      "difficulty": "hard",
+      "category": "Salvation",
+      "hint": "The most famous verse about God's love"
+    },
+    {
+      "id": 4,
+      "reference": "Philippians 4:13",
+      "text": "I can do all things through Christ who strengthens me",
+      "difficulty": "easy",
+      "category": "Strength",
+      "hint": "About doing things through Christ"
+    },
+    {
+      "id": 5,
+      "reference": "Joshua 1:9",
+      "text": "Be strong and courageous Do not be afraid do not be discouraged for the Lord your God will be with you wherever you go",
+      "difficulty": "medium",
+      "category": "Courage",
+      "hint": "God's command to Joshua"
+    },
+    {
+      "id": 6,
+      "reference": "Romans 8:28",
+      "text": "And we know that in all things God works for the good of those who love him who have been called according to his purpose",
+      "difficulty": "hard",
+      "category": "Trust",
+      "hint": "All things work for good"
+    },
+    {
+      "id": 7,
+      "reference": "Matthew 11:28",
+      "text": "Come to me all you who are weary and burdened and I will give you rest",
+      "difficulty": "easy",
+      "category": "Rest",
+      "hint": "Jesus invites the weary"
+    },
+    {
+      "id": 8,
+      "reference": "Jeremiah 29:11",
+      "text": "For I know the plans I have for you declares the Lord plans to prosper you and not to harm you plans to give you hope and a future",
+      "difficulty": "hard",
+      "category": "Hope",
+      "hint": "God has plans for you"
+    },
+    {
+      "id": 9,
+      "reference": "Psalm 23:1",
+      "text": "The Lord is my shepherd I lack nothing",
+      "difficulty": "easy",
+      "category": "Provision",
+      "hint": "The Lord is my..."
+    },
+    {
+      "id": 10,
+      "reference": "1 Corinthians 13:4-5",
+      "text": "Love is patient love is kind It does not envy it does not boast it is not proud It does not dishonor others it is not self seeking it is not easily angered it keeps no record of wrongs",
+      "difficulty": "hard",
+      "category": "Love",
+      "hint": "The famous love chapter"
+    },
+    {
+      "id": 11,
+      "reference": "Isaiah 40:31",
+      "text": "But those who hope in the Lord will renew their strength They will soar on wings like eagles they will run and not grow weary they will walk and not be faint",
+      "difficulty": "medium",
+      "category": "Strength",
+      "hint": "Wings like eagles"
+    },
+    {
+      "id": 12,
+      "reference": "Matthew 6:33",
+      "text": "But seek first his kingdom and his righteousness and all these things will be given to you as well",
+      "difficulty": "medium",
+      "category": "Priorities",
+      "hint": "Seek first the kingdom"
+    }
+  ]
+}

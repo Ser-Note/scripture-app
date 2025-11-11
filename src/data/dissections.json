@@ -1,0 +1,174 @@
+{
+  "dissections": [
+    {
+      "id": 1,
+      "reference": "John 3:16",
+      "verse": "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.",
+      "breakdown": [
+        {
+          "text": "For God",
+          "meaning": "The Creator, the Trinity - Father, Son, and Holy Spirit. The one true God who is love itself.",
+          "category": "subject"
+        },
+        {
+          "text": "so loved",
+          "meaning": "Loved to such an immense degree. This is agape love - unconditional, sacrificial, eternal love.",
+          "category": "action"
+        },
+        {
+          "text": "the world",
+          "meaning": "All of humanity, every person ever created. Not just believers, but everyone - showing God's universal love.",
+          "category": "object"
+        },
+        {
+          "text": "that he gave",
+          "meaning": "God took action. Love is shown through sacrifice and giving, not just words.",
+          "category": "action"
+        },
+        {
+          "text": "his one and only Son",
+          "meaning": "Jesus Christ, the second persons of the Trinity. God's most precious gift - His own Son.",
+          "category": "object"
+        },
+        {
+          "text": "whoever believes",
+          "meaning": "An open invitation to all. Faith (belief) is the key - trusting in Christ's sacrifice.",
+          "category": "condition"
+        },
+        {
+          "text": "shall not perish",
+          "meaning": "Will be saved from spiritual death and eternal separation from God.",
+          "category": "promise"
+        },
+        {
+          "text": "but have eternal life",
+          "meaning": "Forever with God in heaven. Not just living forever, but living in relationship with God eternally.",
+          "category": "promise"
+        }
+      ],
+      "context": "Jesus speaking to Nicodemus, a Pharisee who came to Him at night seeking truth.",
+      "keyThemes": ["Salvation", "God's Love", "Faith", "Eternal Life"]
+    },
+    {
+      "id": 2,
+      "reference": "Psalm 23:1",
+      "verse": "The Lord is my shepherd, I lack nothing.",
+      "breakdown": [
+        {
+          "text": "The Lord",
+          "meaning": "Yahweh, the covenant name of God. The personal, faithful God of Israel.",
+          "category": "subject"
+        },
+        {
+          "text": "is my shepherd",
+          "meaning": "A shepherd guides, protects, provides for, and cares for sheep. This is personal - 'my' shepherd, not distant.",
+          "category": "metaphor"
+        },
+        {
+          "text": "I lack nothing",
+          "meaning": "Complete contentment and provision. When God is our shepherd, He supplies all our true needs.",
+          "category": "result"
+        }
+      ],
+      "context": "David, who was a shepherd himself, wrote this psalm reflecting on God's care for him.",
+      "keyThemes": ["God's Provision", "Trust", "Contentment", "Divine Care"]
+    },
+    {
+      "id": 3,
+      "reference": "Philippians 4:13",
+      "verse": "I can do all things through Christ who strengthens me.",
+      "breakdown": [
+        {
+          "text": "I can do",
+          "meaning": "Personal capability - but not in our own strength. The emphasis is on what follows.",
+          "category": "declaration"
+        },
+        {
+          "text": "all things",
+          "meaning": "Everything God calls us to do. Not necessarily everything we want, but everything in God's will for us.",
+          "category": "scope"
+        },
+        {
+          "text": "through Christ",
+          "meaning": "The source of our strength. Not by our power, but by being united with Jesus.",
+          "category": "source"
+        },
+        {
+          "text": "who strengthens me",
+          "meaning": "Christ actively empowers us. Present tense - He is strengthening us right now, continually.",
+          "category": "action"
+        }
+      ],
+      "context": "Paul wrote this from prison, having learned contentment in all circumstances - plenty or need.",
+      "keyThemes": ["Strength in Christ", "Perseverance", "Contentment", "God's Power"]
+    },
+    {
+      "id": 4,
+      "reference": "Romans 8:28",
+      "verse": "And we know that in all things God works for the good of those who love him, who have been called according to his purpose.",
+      "breakdown": [
+        {
+          "text": "we know",
+          "meaning": "This is certain truth, not wishful thinking. Believers can be confident in this promise.",
+          "category": "certainty"
+        },
+        {
+          "text": "in all things",
+          "meaning": "Every circumstance - good and bad, joyful and painful. Nothing is outside God's sovereign plan.",
+          "category": "scope"
+        },
+        {
+          "text": "God works",
+          "meaning": "God is actively involved. He doesn't just allow things, He orchestrates them for purpose.",
+          "category": "action"
+        },
+        {
+          "text": "for the good",
+          "meaning": "Ultimate good - our spiritual maturity and God's glory. Not always what feels good, but what is truly good.",
+          "category": "purpose"
+        },
+        {
+          "text": "those who love him",
+          "meaning": "Believers who have a relationship with God. Those who are in covenant with Him.",
+          "category": "condition"
+        },
+        {
+          "text": "called according to his purpose",
+          "meaning": "Chosen by God for His plans. Our lives fit into God's greater redemptive purpose.",
+          "category": "identity"
+        }
+      ],
+      "context": "Paul reassuring believers that nothing can separate them from God's love, even suffering.",
+      "keyThemes": ["God's Sovereignty", "Trust", "Purpose", "Suffering"]
+    },
+    {
+      "id": 5,
+      "reference": "Matthew 11:28",
+      "verse": "Come to me, all you who are weary and burdened, and I will give you rest.",
+      "breakdown": [
+        {
+          "text": "Come to me",
+          "meaning": "A personal invitation from Jesus. Not to a religion or rules, but to a person - Him.",
+          "category": "invitation"
+        },
+        {
+          "text": "all you who are weary",
+          "meaning": "Exhausted, tired from life's struggles. Jesus welcomes those who are spiritually and physically drained.",
+          "category": "condition"
+        },
+        {
+          "text": "and burdened",
+          "meaning": "Carrying heavy loads - sin, guilt, anxiety, legalism, life's troubles.",
+          "category": "condition"
+        },
+        {
+          "text": "I will give you rest",
+          "meaning": "Jesus promises relief. Not just physical rest, but peace for the soul. This is His gift, not earned.",
+          "category": "promise"
+        }
+      ],
+      "context": "Jesus contrasting His gentle way with the heavy burdens the Pharisees placed on people.",
+      "keyThemes": ["Rest", "Grace", "Jesus' Invitation", "Relief from Burdens"]
+    }
+  ]
+}
