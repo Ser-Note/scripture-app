@@ -95,6 +95,15 @@ const handleRestart = () => {
             {/* Explanation & Next Button */}
             {showExplanation && (
             <div className="quiz-explanation">
+                {/* Show correct answer if user got it wrong */}
+                {!shuffledOptions[selectedAnswer]?.correct && (
+                  <div className="correct-answer-display">
+                    <strong>✓ Correct Answer:</strong>
+                    <div className="correct-answer-text">
+                      {shuffledOptions.find(opt => opt.correct)?.reference} - {shuffledOptions.find(opt => opt.correct)?.simplified}
+                    </div>
+                  </div>
+                )}
                 <p className="explanation-text">{currentQuestion.explanation}</p>
                 <button 
                 className="next-btn"
