@@ -255,6 +255,1094 @@
       ],
       "explanation": "Romans 8:28 is a powerful promise that God sovereignly orchestrates all events for the ultimate good of His children.",
       "category": "Trust"
+    },
+    {
+      "id": 9,
+      "question": "Which verse teaches about not worrying and trusting God for provision?",
+      "options": [
+        {
+          "reference": "Matthew 6:25-26",
+          "simplified": "Don't worry about life; God feeds the birds and will care for you too",
+          "text": "Do not worry about your life... Look at the birds of the air",
+          "correct": true
+        },
+        {
+          "reference": "Philippians 4:6",
+          "simplified": "Don't be anxious; pray about everything with thanksgiving",
+          "text": "Do not be anxious about anything, but in everything by prayer",
+          "correct": false
+        },
+        {
+          "reference": "1 Peter 5:7",
+          "simplified": "Give all your worries to God because He cares for you",
+          "text": "Cast all your anxiety on him because he cares for you",
+          "correct": false
+        },
+        {
+          "reference": "Psalm 55:22",
+          "simplified": "Give your burdens to the Lord and He'll sustain you",
+          "text": "Cast your cares on the Lord and he will sustain you",
+          "correct": false
+        }
+      ],
+      "explanation": "In the Sermon on the Mount, Jesus uses birds and flowers as examples of how God provides for His creation, teaching us not to worry.",
+      "category": "Trust"
+    },
+    {
+      "id": 10,
+      "question": "Which verse describes the Word of God as living and active?",
+      "options": [
+        {
+          "reference": "Hebrews 4:12",
+          "simplified": "God's Word is alive, powerful, and sharper than any sword",
+          "text": "For the word of God is alive and active. Sharper than any double-edged sword",
+          "correct": true
+        },
+        {
+          "reference": "2 Timothy 3:16",
+          "simplified": "All Scripture is inspired by God and useful for teaching",
+          "text": "All Scripture is God-breathed and is useful for teaching",
+          "correct": false
+        },
+        {
+          "reference": "Psalm 119:105",
+          "simplified": "God's Word is a lamp and light guiding our path",
+          "text": "Your word is a lamp for my feet, a light on my path",
+          "correct": false
+        },
+        {
+          "reference": "John 1:1",
+          "simplified": "In the beginning was the Word, and the Word was God",
+          "text": "In the beginning was the Word, and the Word was with God",
+          "correct": false
+        }
+      ],
+      "explanation": "Hebrews 4:12 describes Scripture as living and active - not just historical words, but God's ongoing communication that penetrates our hearts.",
+      "category": "Scripture"
+    },
+    {
+      "id": 11,
+      "question": "Which verse commands us to love our enemies?",
+      "options": [
+        {
+          "reference": "Matthew 5:44",
+          "simplified": "Love your enemies and pray for those who persecute you",
+          "text": "But I tell you, love your enemies and pray for those who persecute you",
+          "correct": true
+        },
+        {
+          "reference": "Romans 12:20",
+          "simplified": "If your enemy is hungry, feed them",
+          "text": "If your enemy is hungry, feed him; if he is thirsty, give him something to drink",
+          "correct": false
+        },
+        {
+          "reference": "Proverbs 25:21",
+          "simplified": "Give food and water to your enemy",
+          "text": "If your enemy is hungry, give him food to eat",
+          "correct": false
+        },
+        {
+          "reference": "Luke 6:27",
+          "simplified": "Do good to those who hate you",
+          "text": "Do good to those who hate you",
+          "correct": false
+        }
+      ],
+      "explanation": "In the Sermon on the Mount, Jesus radically redefines love - not just loving those who love us, but even our enemies.",
+      "category": "Love"
+    },
+    {
+      "id": 12,
+      "question": "Which verse promises God will never leave or forsake you?",
+      "options": [
+        {
+          "reference": "Hebrews 13:5",
+          "simplified": "God will never leave you or abandon you",
+          "text": "Never will I leave you; never will I forsake you",
+          "correct": true
+        },
+        {
+          "reference": "Deuteronomy 31:6",
+          "simplified": "Be strong; God goes with you and won't abandon you",
+          "text": "The Lord himself goes before you and will be with you",
+          "correct": false
+        },
+        {
+          "reference": "Joshua 1:9",
+          "simplified": "Don't be afraid because God is with you everywhere",
+          "text": "For the Lord your God will be with you wherever you go",
+          "correct": false
+        },
+        {
+          "reference": "Isaiah 41:10",
+          "simplified": "Don't fear because God is with you",
+          "text": "Do not fear, for I am with you",
+          "correct": false
+        }
+      ],
+      "explanation": "Hebrews quotes this Old Testament promise, reassuring believers that God's faithful presence is permanent and unchanging.",
+      "category": "Courage"
+    },
+    {
+      "id": 13,
+      "question": "Which verse teaches that we should not conform to the world's patterns?",
+      "options": [
+        {
+          "reference": "Romans 12:2",
+          "simplified": "Don't copy the world; let God transform your mind",
+          "text": "Do not conform to the pattern of this world, but be transformed by the renewing of your mind",
+          "correct": true
+        },
+        {
+          "reference": "1 John 2:15",
+          "simplified": "Don't love the world or its things",
+          "text": "Do not love the world or anything in the world",
+          "correct": false
+        },
+        {
+          "reference": "James 4:4",
+          "simplified": "Friendship with the world is hostility toward God",
+          "text": "Friendship with the world means enmity against God",
+          "correct": false
+        },
+        {
+          "reference": "Colossians 3:2",
+          "simplified": "Focus your mind on heavenly things, not earthly ones",
+          "text": "Set your minds on things above, not on earthly things",
+          "correct": false
+        }
+      ],
+      "explanation": "Romans 12:2 calls believers to think differently from the world, being transformed by God rather than shaped by culture.",
+      "category": "Holiness"
+    },
+    {
+      "id": 14,
+      "question": "Which verse promises rest for the weary?",
+      "options": [
+        {
+          "reference": "Matthew 11:28",
+          "simplified": "Come to Jesus if you're tired, and He'll give you rest",
+          "text": "Come to me, all you who are weary and burdened, and I will give you rest",
+          "correct": true
+        },
+        {
+          "reference": "Psalm 23:2",
+          "simplified": "God makes me lie down in green pastures",
+          "text": "He makes me lie down in green pastures, he leads me beside quiet waters",
+          "correct": false
+        },
+        {
+          "reference": "Exodus 33:14",
+          "simplified": "God's presence goes with you and gives rest",
+          "text": "My Presence will go with you, and I will give you rest",
+          "correct": false
+        },
+        {
+          "reference": "Psalm 62:1",
+          "simplified": "Find rest in God alone",
+          "text": "Truly my soul finds rest in God",
+          "correct": false
+        }
+      ],
+      "explanation": "Jesus invites all who are exhausted from striving to come to Him for true, soul-deep rest.",
+      "category": "Rest"
+    },
+    {
+      "id": 15,
+      "question": "Which verse teaches that faith without works is dead?",
+      "options": [
+        {
+          "reference": "James 2:26",
+          "simplified": "Just as a body without spirit is dead, faith without action is dead",
+          "text": "As the body without the spirit is dead, so faith without deeds is dead",
+          "correct": true
+        },
+        {
+          "reference": "Ephesians 2:8-9",
+          "simplified": "Salvation is by grace through faith, not by works",
+          "text": "For it is by grace you have been saved, through faith... not by works",
+          "correct": false
+        },
+        {
+          "reference": "Galatians 5:6",
+          "simplified": "Faith expresses itself through love",
+          "text": "The only thing that counts is faith expressing itself through love",
+          "correct": false
+        },
+        {
+          "reference": "1 John 3:18",
+          "simplified": "Love with actions, not just words",
+          "text": "Let us not love with words or speech but with actions and in truth",
+          "correct": false
+        }
+      ],
+      "explanation": "James emphasizes that genuine faith naturally produces good works - not to earn salvation, but as evidence of real faith.",
+      "category": "Faith"
+    },
+    {
+      "id": 16,
+      "question": "Which verse tells us we are God's masterpiece?",
+      "options": [
+        {
+          "reference": "Ephesians 2:10",
+          "simplified": "We are God's handiwork, created to do good works",
+          "text": "For we are God's handiwork, created in Christ Jesus to do good works",
+          "correct": true
+        },
+        {
+          "reference": "Genesis 1:27",
+          "simplified": "God created humans in His own image",
+          "text": "So God created mankind in his own image",
+          "correct": false
+        },
+        {
+          "reference": "Psalm 139:14",
+          "simplified": "I'm fearfully and wonderfully made",
+          "text": "I praise you because I am fearfully and wonderfully made",
+          "correct": false
+        },
+        {
+          "reference": "1 Peter 2:9",
+          "simplified": "You are a chosen people, a royal priesthood",
+          "text": "But you are a chosen people, a royal priesthood",
+          "correct": false
+        }
+      ],
+      "explanation": "Paul reminds believers they are God's workmanship (or 'masterpiece' in some translations), created with purpose.",
+      "category": "Identity"
+    },
+    {
+      "id": 17,
+      "question": "Which verse says we can do all things through Christ?",
+      "options": [
+        {
+          "reference": "Philippians 4:13",
+          "simplified": "I can do everything through Christ who strengthens me",
+          "text": "I can do all this through him who gives me strength",
+          "correct": true
+        },
+        {
+          "reference": "2 Corinthians 12:9",
+          "simplified": "God's power is perfected in weakness",
+          "text": "My grace is sufficient for you, for my power is made perfect in weakness",
+          "correct": false
+        },
+        {
+          "reference": "Isaiah 40:31",
+          "simplified": "Those who hope in God will renew their strength",
+          "text": "But those who hope in the Lord will renew their strength",
+          "correct": false
+        },
+        {
+          "reference": "2 Timothy 1:7",
+          "simplified": "God gives us power, love, and self-discipline",
+          "text": "For the Spirit God gave us does not make us timid, but gives us power",
+          "correct": false
+        }
+      ],
+      "explanation": "Paul wrote this from prison, not claiming he could do anything he wanted, but that Christ's strength sustains him in all circumstances.",
+      "category": "Strength"
+    },
+    {
+      "id": 18,
+      "question": "Which verse commands us to be kind and forgive one another?",
+      "options": [
+        {
+          "reference": "Ephesians 4:32",
+          "simplified": "Be kind and compassionate, forgiving each other as God forgave you",
+          "text": "Be kind and compassionate to one another, forgiving each other, just as in Christ God forgave you",
+          "correct": true
+        },
+        {
+          "reference": "Colossians 3:13",
+          "simplified": "Bear with each other and forgive as the Lord forgave you",
+          "text": "Bear with each other and forgive one another... Forgive as the Lord forgave you",
+          "correct": false
+        },
+        {
+          "reference": "Matthew 6:14",
+          "simplified": "If you forgive others, God will forgive you",
+          "text": "For if you forgive other people when they sin against you, your heavenly Father will also forgive you",
+          "correct": false
+        },
+        {
+          "reference": "Luke 6:37",
+          "simplified": "Don't judge or condemn; forgive and you'll be forgiven",
+          "text": "Do not judge, and you will not be judged. Do not condemn... Forgive, and you will be forgiven",
+          "correct": false
+        }
+      ],
+      "explanation": "Paul links our forgiveness of others to God's forgiveness of us - we forgive because we've been forgiven.",
+      "category": "Forgiveness"
+    },
+    {
+      "id": 19,
+      "question": "Which verse says perfect love drives out fear?",
+      "options": [
+        {
+          "reference": "1 John 4:18",
+          "simplified": "Perfect love eliminates fear because fear involves punishment",
+          "text": "There is no fear in love. But perfect love drives out fear",
+          "correct": true
+        },
+        {
+          "reference": "2 Timothy 1:7",
+          "simplified": "God didn't give us a spirit of fear but of power and love",
+          "text": "For the Spirit God gave us does not make us timid, but gives us power, love and self-discipline",
+          "correct": false
+        },
+        {
+          "reference": "Psalm 27:1",
+          "simplified": "The Lord is my light and salvation; whom shall I fear?",
+          "text": "The Lord is my light and my salvation—whom shall I fear?",
+          "correct": false
+        },
+        {
+          "reference": "Isaiah 41:10",
+          "simplified": "Don't fear because God is with you",
+          "text": "So do not fear, for I am with you",
+          "correct": false
+        }
+      ],
+      "explanation": "John explains that when we truly understand God's love, fear loses its grip because we trust His perfect love.",
+      "category": "Love"
+    },
+    {
+      "id": 20,
+      "question": "Which verse describes the armor of God?",
+      "options": [
+        {
+          "reference": "Ephesians 6:11",
+          "simplified": "Put on God's full armor to stand against the devil's schemes",
+          "text": "Put on the full armor of God, so that you can take your stand against the devil's schemes",
+          "correct": true
+        },
+        {
+          "reference": "1 Thessalonians 5:8",
+          "simplified": "Put on faith and love as a breastplate, and hope as a helmet",
+          "text": "But since we belong to the day, let us be sober, putting on faith and love as a breastplate",
+          "correct": false
+        },
+        {
+          "reference": "Romans 13:12",
+          "simplified": "Put aside darkness and put on the armor of light",
+          "text": "So let us put aside the deeds of darkness and put on the armor of light",
+          "correct": false
+        },
+        {
+          "reference": "2 Corinthians 6:7",
+          "simplified": "We use weapons of righteousness",
+          "text": "In truthful speech and in the power of God; with weapons of righteousness",
+          "correct": false
+        }
+      ],
+      "explanation": "Paul uses military imagery to describe the spiritual resources God provides for spiritual warfare.",
+      "category": "Spiritual Warfare"
+    },
+    {
+      "id": 21,
+      "question": "Which verse teaches that God's grace is sufficient?",
+      "options": [
+        {
+          "reference": "2 Corinthians 12:9",
+          "simplified": "God's grace is enough; His power is perfected in weakness",
+          "text": "But he said to me, 'My grace is sufficient for you, for my power is made perfect in weakness'",
+          "correct": true
+        },
+        {
+          "reference": "Ephesians 2:8",
+          "simplified": "You're saved by grace through faith",
+          "text": "For it is by grace you have been saved, through faith",
+          "correct": false
+        },
+        {
+          "reference": "Titus 2:11",
+          "simplified": "God's grace brings salvation to everyone",
+          "text": "For the grace of God has appeared that offers salvation to all people",
+          "correct": false
+        },
+        {
+          "reference": "Romans 5:20",
+          "simplified": "Where sin increased, grace increased even more",
+          "text": "But where sin increased, grace increased all the more",
+          "correct": false
+        }
+      ],
+      "explanation": "Paul asked God three times to remove his 'thorn in the flesh,' but God's response was that His grace was enough.",
+      "category": "Grace"
+    },
+    {
+      "id": 22,
+      "question": "Which verse promises renewal like the eagle's?",
+      "options": [
+        {
+          "reference": "Isaiah 40:31",
+          "simplified": "Those who hope in God will soar on wings like eagles",
+          "text": "But those who hope in the Lord will renew their strength. They will soar on wings like eagles",
+          "correct": true
+        },
+        {
+          "reference": "Psalm 103:5",
+          "simplified": "God satisfies you so your youth is renewed like the eagle's",
+          "text": "Who satisfies your desires with good things so that your youth is renewed like the eagle's",
+          "correct": false
+        },
+        {
+          "reference": "Lamentations 5:21",
+          "simplified": "Restore us to yourself, Lord, and renew our days",
+          "text": "Restore us to yourself, Lord, that we may return; renew our days as of old",
+          "correct": false
+        },
+        {
+          "reference": "2 Corinthians 4:16",
+          "simplified": "Though outwardly we're wasting away, inwardly we're renewed daily",
+          "text": "Though outwardly we are wasting away, yet inwardly we are being renewed day by day",
+          "correct": false
+        }
+      ],
+      "explanation": "Isaiah promises that those who wait on the Lord will be renewed in strength, running without growing weary.",
+      "category": "Strength"
+    },
+    {
+      "id": 23,
+      "question": "Which verse says Jesus is the way, the truth, and the life?",
+      "options": [
+        {
+          "reference": "John 14:6",
+          "simplified": "Jesus is the only way to the Father",
+          "text": "I am the way and the truth and the life. No one comes to the Father except through me",
+          "correct": true
+        },
+        {
+          "reference": "John 10:9",
+          "simplified": "Jesus is the gate; whoever enters through Him will be saved",
+          "text": "I am the gate; whoever enters through me will be saved",
+          "correct": false
+        },
+        {
+          "reference": "Acts 4:12",
+          "simplified": "Salvation is found in no one else but Jesus",
+          "text": "Salvation is found in no one else, for there is no other name under heaven",
+          "correct": false
+        },
+        {
+          "reference": "John 11:25",
+          "simplified": "Jesus is the resurrection and the life",
+          "text": "I am the resurrection and the life",
+          "correct": false
+        }
+      ],
+      "explanation": "Jesus makes an exclusive claim - He alone is the path to God, embodying truth and providing eternal life.",
+      "category": "Salvation"
+    },
+    {
+      "id": 24,
+      "question": "Which verse tells us to seek first God's kingdom?",
+      "options": [
+        {
+          "reference": "Matthew 6:33",
+          "simplified": "Seek God's kingdom first, and everything else will be provided",
+          "text": "But seek first his kingdom and his righteousness, and all these things will be given to you",
+          "correct": true
+        },
+        {
+          "reference": "Luke 12:31",
+          "simplified": "Seek His kingdom and these things will be added",
+          "text": "But seek his kingdom, and these things will be given to you as well",
+          "correct": false
+        },
+        {
+          "reference": "Colossians 3:1",
+          "simplified": "Set your hearts on things above where Christ is",
+          "text": "Since, then, you have been raised with Christ, set your hearts on things above",
+          "correct": false
+        },
+        {
+          "reference": "Psalm 37:4",
+          "simplified": "Delight in the Lord and He'll give you your heart's desires",
+          "text": "Take delight in the Lord, and he will give you the desires of your heart",
+          "correct": false
+        }
+      ],
+      "explanation": "Jesus teaches priorities - when we prioritize God's kingdom, He takes care of our earthly needs.",
+      "category": "Priority"
+    },
+    {
+      "id": 25,
+      "question": "Which verse says we are saved by grace, not by works?",
+      "options": [
+        {
+          "reference": "Ephesians 2:8-9",
+          "simplified": "Salvation is God's gift through faith, not earned by works",
+          "text": "For it is by grace you have been saved, through faith... not by works, so that no one can boast",
+          "correct": true
+        },
+        {
+          "reference": "Titus 3:5",
+          "simplified": "God saved us not by righteous things we did, but by His mercy",
+          "text": "He saved us, not because of righteous things we had done, but because of his mercy",
+          "correct": false
+        },
+        {
+          "reference": "Romans 3:28",
+          "simplified": "We're justified by faith apart from works of the law",
+          "text": "For we maintain that a person is justified by faith apart from the works of the law",
+          "correct": false
+        },
+        {
+          "reference": "Romans 11:6",
+          "simplified": "If salvation is by grace, it's no longer by works",
+          "text": "And if by grace, then it cannot be based on works",
+          "correct": false
+        }
+      ],
+      "explanation": "Paul's clearest statement that salvation is entirely God's gracious gift, received by faith alone, not earned.",
+      "category": "Salvation"
+    },
+    {
+      "id": 26,
+      "question": "Which verse promises a crown of life to those who persevere?",
+      "options": [
+        {
+          "reference": "James 1:12",
+          "simplified": "Blessed is the one who perseveres under trial; they'll receive the crown of life",
+          "text": "Blessed is the one who perseveres under trial... will receive the crown of life",
+          "correct": true
+        },
+        {
+          "reference": "Revelation 2:10",
+          "simplified": "Be faithful until death and receive the crown of life",
+          "text": "Be faithful, even to the point of death, and I will give you life as your victor's crown",
+          "correct": false
+        },
+        {
+          "reference": "2 Timothy 4:8",
+          "simplified": "There's a crown of righteousness for those who long for Christ's return",
+          "text": "Now there is in store for me the crown of righteousness",
+          "correct": false
+        },
+        {
+          "reference": "1 Peter 5:4",
+          "simplified": "When Christ appears, you'll receive the crown of glory",
+          "text": "And when the Chief Shepherd appears, you will receive the crown of glory",
+          "correct": false
+        }
+      ],
+      "explanation": "James promises eternal reward to those who remain faithful through trials and temptations.",
+      "category": "Perseverance"
+    },
+    {
+      "id": 27,
+      "question": "Which verse says God works in us to will and to act?",
+      "options": [
+        {
+          "reference": "Philippians 2:13",
+          "simplified": "God works in you to desire and do what pleases Him",
+          "text": "For it is God who works in you to will and to act in order to fulfill his good purpose",
+          "correct": true
+        },
+        {
+          "reference": "Philippians 1:6",
+          "simplified": "God will complete the good work He started in you",
+          "text": "Being confident of this, that he who began a good work in you will carry it on to completion",
+          "correct": false
+        },
+        {
+          "reference": "Ezekiel 36:27",
+          "simplified": "God will put His Spirit in you to follow His decrees",
+          "text": "And I will put my Spirit in you and move you to follow my decrees",
+          "correct": false
+        },
+        {
+          "reference": "2 Thessalonians 1:11",
+          "simplified": "God fulfills every desire for goodness by His power",
+          "text": "We constantly pray... that our God may... fulfill every desire for goodness",
+          "correct": false
+        }
+      ],
+      "explanation": "Paul reveals that even our desires and actions for good are empowered by God working within us.",
+      "category": "Sanctification"
+    },
+    {
+      "id": 28,
+      "question": "Which verse teaches that the fear of the Lord is the beginning of wisdom?",
+      "options": [
+        {
+          "reference": "Proverbs 9:10",
+          "simplified": "Wisdom begins with reverence for God",
+          "text": "The fear of the Lord is the beginning of wisdom, and knowledge of the Holy One is understanding",
+          "correct": true
+        },
+        {
+          "reference": "Proverbs 1:7",
+          "simplified": "Fear of the Lord is the beginning of knowledge",
+          "text": "The fear of the Lord is the beginning of knowledge",
+          "correct": false
+        },
+        {
+          "reference": "Psalm 111:10",
+          "simplified": "Fear of the Lord is the beginning of wisdom",
+          "text": "The fear of the Lord is the beginning of wisdom",
+          "correct": false
+        },
+        {
+          "reference": "James 1:5",
+          "simplified": "If you lack wisdom, ask God",
+          "text": "If any of you lacks wisdom, you should ask God",
+          "correct": false
+        }
+      ],
+      "explanation": "Proverbs emphasizes that true wisdom starts with a proper reverence and respect for God.",
+      "category": "Wisdom"
+    },
+    {
+      "id": 29,
+      "question": "Which verse says whoever believes in Jesus will not perish?",
+      "options": [
+        {
+          "reference": "John 3:16",
+          "simplified": "God loved the world and sent Jesus so believers would have eternal life",
+          "text": "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish",
+          "correct": true
+        },
+        {
+          "reference": "John 5:24",
+          "simplified": "Whoever hears Jesus' word and believes has eternal life",
+          "text": "Whoever hears my word and believes him who sent me has eternal life",
+          "correct": false
+        },
+        {
+          "reference": "John 11:25-26",
+          "simplified": "Whoever believes in Jesus will never die",
+          "text": "I am the resurrection and the life. The one who believes in me will live",
+          "correct": false
+        },
+        {
+          "reference": "Acts 16:31",
+          "simplified": "Believe in the Lord Jesus and you'll be saved",
+          "text": "Believe in the Lord Jesus, and you will be saved",
+          "correct": false
+        }
+      ],
+      "explanation": "The most famous verse in Scripture, summarizing the gospel: belief in Jesus brings eternal life.",
+      "category": "Salvation"
+    },
+    {
+      "id": 30,
+      "question": "Which verse commands us to pray without ceasing?",
+      "options": [
+        {
+          "reference": "1 Thessalonians 5:17",
+          "simplified": "Pray continually",
+          "text": "Pray continually",
+          "correct": true
+        },
+        {
+          "reference": "Luke 18:1",
+          "simplified": "Always pray and don't give up",
+          "text": "Then Jesus told his disciples a parable to show them that they should always pray and not give up",
+          "correct": false
+        },
+        {
+          "reference": "Ephesians 6:18",
+          "simplified": "Pray in the Spirit on all occasions",
+          "text": "And pray in the Spirit on all occasions with all kinds of prayers and requests",
+          "correct": false
+        },
+        {
+          "reference": "Colossians 4:2",
+          "simplified": "Devote yourselves to prayer",
+          "text": "Devote yourselves to prayer, being watchful and thankful",
+          "correct": false
+        }
+      ],
+      "explanation": "Paul gives a brief but powerful command to maintain constant communion with God through ongoing prayer.",
+      "category": "Prayer"
+    },
+    {
+      "id": 31,
+      "question": "Which verse says to take every thought captive to Christ?",
+      "options": [
+        {
+          "reference": "2 Corinthians 10:5",
+          "simplified": "Take every thought captive to obey Christ",
+          "text": "We take captive every thought to make it obedient to Christ",
+          "correct": true
+        },
+        {
+          "reference": "Philippians 4:8",
+          "simplified": "Think about whatever is true, noble, right, and pure",
+          "text": "Finally, brothers and sisters, whatever is true, whatever is noble... think about such things",
+          "correct": false
+        },
+        {
+          "reference": "Romans 12:2",
+          "simplified": "Be transformed by renewing your mind",
+          "text": "Be transformed by the renewing of your mind",
+          "correct": false
+        },
+        {
+          "reference": "Colossians 3:2",
+          "simplified": "Set your minds on things above",
+          "text": "Set your minds on things above, not on earthly things",
+          "correct": false
+        }
+      ],
+      "explanation": "Paul teaches spiritual warfare includes controlling our thoughts and aligning them with Christ's truth.",
+      "category": "Spiritual Warfare"
+    },
+    {
+      "id": 32,
+      "question": "Which verse promises that God began a good work in you and will complete it?",
+      "options": [
+        {
+          "reference": "Philippians 1:6",
+          "simplified": "God will finish the good work He started in you",
+          "text": "Being confident of this, that he who began a good work in you will carry it on to completion",
+          "correct": true
+        },
+        {
+          "reference": "Philippians 2:13",
+          "simplified": "God works in you to will and act according to His purpose",
+          "text": "For it is God who works in you to will and to act in order to fulfill his good purpose",
+          "correct": false
+        },
+        {
+          "reference": "1 Thessalonians 5:24",
+          "simplified": "The one who calls you is faithful and will do it",
+          "text": "The one who calls you is faithful, and he will do it",
+          "correct": false
+        },
+        {
+          "reference": "Jude 1:24",
+          "simplified": "God is able to keep you from stumbling",
+          "text": "To him who is able to keep you from stumbling",
+          "correct": false
+        }
+      ],
+      "explanation": "Paul assures believers that God doesn't abandon His work in us - He faithfully completes what He starts.",
+      "category": "Assurance"
+    },
+    {
+      "id": 33,
+      "question": "Which verse says God's Word is a lamp to our feet?",
+      "options": [
+        {
+          "reference": "Psalm 119:105",
+          "simplified": "Your word lights my path like a lamp",
+          "text": "Your word is a lamp for my feet, a light on my path",
+          "correct": true
+        },
+        {
+          "reference": "Proverbs 6:23",
+          "simplified": "Commands are a lamp and teaching is a light",
+          "text": "For this command is a lamp, this teaching is a light",
+          "correct": false
+        },
+        {
+          "reference": "2 Peter 1:19",
+          "simplified": "The prophetic word is like a light shining in darkness",
+          "text": "We also have the prophetic message as something completely reliable, and you will do well to pay attention to it, as to a light shining in a dark place",
+          "correct": false
+        },
+        {
+          "reference": "Psalm 18:28",
+          "simplified": "You light my lamp; the Lord turns my darkness into light",
+          "text": "You, Lord, keep my lamp burning; my God turns my darkness into light",
+          "correct": false
+        }
+      ],
+      "explanation": "The psalmist describes God's Word as providing guidance and illumination for life's journey.",
+      "category": "Scripture"
+    },
+    {
+      "id": 34,
+      "question": "Which verse teaches that Jesus came not to be served but to serve?",
+      "options": [
+        {
+          "reference": "Mark 10:45",
+          "simplified": "The Son of Man came to serve and give His life as a ransom",
+          "text": "For even the Son of Man did not come to be served, but to serve, and to give his life as a ransom",
+          "correct": true
+        },
+        {
+          "reference": "John 13:14",
+          "simplified": "If Jesus washed your feet, you should wash one another's feet",
+          "text": "Now that I, your Lord and Teacher, have washed your feet, you also should wash one another's feet",
+          "correct": false
+        },
+        {
+          "reference": "Philippians 2:7",
+          "simplified": "Christ made Himself nothing and took the form of a servant",
+          "text": "Rather, he made himself nothing by taking the very nature of a servant",
+          "correct": false
+        },
+        {
+          "reference": "Luke 22:27",
+          "simplified": "I am among you as one who serves",
+          "text": "But I am among you as one who serves",
+          "correct": false
+        }
+      ],
+      "explanation": "Jesus redefines greatness - true leadership means serving others, culminating in His sacrificial death.",
+      "category": "Service"
+    },
+    {
+      "id": 35,
+      "question": "Which verse promises that nothing can separate us from God's love?",
+      "options": [
+        {
+          "reference": "Romans 8:38-39",
+          "simplified": "Nothing in all creation can separate us from God's love in Christ",
+          "text": "Neither death nor life... nor anything else in all creation, will be able to separate us from the love of God",
+          "correct": true
+        },
+        {
+          "reference": "Romans 5:8",
+          "simplified": "God demonstrated His love - Christ died for us while we were still sinners",
+          "text": "But God demonstrates his own love for us in this: While we were still sinners, Christ died for us",
+          "correct": false
+        },
+        {
+          "reference": "John 10:28-29",
+          "simplified": "No one can snatch you from Jesus' or the Father's hand",
+          "text": "No one will snatch them out of my hand... no one can snatch them out of my Father's hand",
+          "correct": false
+        },
+        {
+          "reference": "1 John 4:16",
+          "simplified": "God is love, and whoever lives in love lives in God",
+          "text": "God is love. Whoever lives in love lives in God, and God in them",
+          "correct": false
+        }
+      ],
+      "explanation": "Paul lists everything imaginable - death, life, angels, demons, present, future - and declares none can separate believers from God's love.",
+      "category": "Love"
+    },
+    {
+      "id": 36,
+      "question": "Which verse commands us to honor our parents?",
+      "options": [
+        {
+          "reference": "Ephesians 6:2-3",
+          "simplified": "Honor your father and mother - it's the first commandment with a promise",
+          "text": "Honor your father and mother—which is the first commandment with a promise",
+          "correct": true
+        },
+        {
+          "reference": "Exodus 20:12",
+          "simplified": "Honor your father and mother so you may live long",
+          "text": "Honor your father and your mother, so that you may live long in the land",
+          "correct": false
+        },
+        {
+          "reference": "Colossians 3:20",
+          "simplified": "Children, obey your parents in everything",
+          "text": "Children, obey your parents in everything, for this pleases the Lord",
+          "correct": false
+        },
+        {
+          "reference": "Proverbs 23:22",
+          "simplified": "Listen to your father and don't despise your mother when she's old",
+          "text": "Listen to your father, who gave you life, and do not despise your mother when she is old",
+          "correct": false
+        }
+      ],
+      "explanation": "Paul quotes the fifth commandment, emphasizing it's the first one that includes a specific promise of blessing.",
+      "category": "Family"
+    },
+    {
+      "id": 37,
+      "question": "Which verse says we overcome by the blood of the Lamb?",
+      "options": [
+        {
+          "reference": "Revelation 12:11",
+          "simplified": "They overcame by the Lamb's blood and their testimony",
+          "text": "They triumphed over him by the blood of the Lamb and by the word of their testimony",
+          "correct": true
+        },
+        {
+          "reference": "1 John 5:4",
+          "simplified": "Everyone born of God overcomes the world through faith",
+          "text": "For everyone born of God overcomes the world. This is the victory that has overcome the world, even our faith",
+          "correct": false
+        },
+        {
+          "reference": "Romans 8:37",
+          "simplified": "We are more than conquerors through Christ who loved us",
+          "text": "No, in all these things we are more than conquerors through him who loved us",
+          "correct": false
+        },
+        {
+          "reference": "1 Corinthians 15:57",
+          "simplified": "God gives us victory through Jesus Christ",
+          "text": "But thanks be to God! He gives us the victory through our Lord Jesus Christ",
+          "correct": false
+        }
+      ],
+      "explanation": "Revelation describes how believers overcome Satan - through Christ's sacrificial blood and faithful testimony.",
+      "category": "Victory"
+    },
+    {
+      "id": 38,
+      "question": "Which verse teaches that God disciplines those He loves?",
+      "options": [
+        {
+          "reference": "Hebrews 12:6",
+          "simplified": "The Lord disciplines those He loves and corrects His children",
+          "text": "Because the Lord disciplines the one he loves, and he chastens everyone he accepts as his son",
+          "correct": true
+        },
+        {
+          "reference": "Proverbs 3:11-12",
+          "simplified": "Don't despise the Lord's discipline because He disciplines those He loves",
+          "text": "My son, do not despise the Lord's discipline... because the Lord disciplines those he loves",
+          "correct": false
+        },
+        {
+          "reference": "Revelation 3:19",
+          "simplified": "Those I love I rebuke and discipline",
+          "text": "Those whom I love I rebuke and discipline. So be earnest and repent",
+          "correct": false
+        },
+        {
+          "reference": "Proverbs 13:24",
+          "simplified": "Whoever loves their children disciplines them",
+          "text": "Whoever spares the rod hates their children, but the one who loves their children is careful to discipline them",
+          "correct": false
+        }
+      ],
+      "explanation": "The writer of Hebrews explains that God's discipline is actually proof of His love and our position as His children.",
+      "category": "Discipline"
+    },
+    {
+      "id": 39,
+      "question": "Which verse says Jesus is the same yesterday, today, and forever?",
+      "options": [
+        {
+          "reference": "Hebrews 13:8",
+          "simplified": "Jesus Christ never changes - He's the same forever",
+          "text": "Jesus Christ is the same yesterday and today and forever",
+          "correct": true
+        },
+        {
+          "reference": "Malachi 3:6",
+          "simplified": "I the Lord do not change",
+          "text": "I the Lord do not change",
+          "correct": false
+        },
+        {
+          "reference": "James 1:17",
+          "simplified": "God doesn't change like shifting shadows",
+          "text": "Every good and perfect gift is from above... who does not change like shifting shadows",
+          "correct": false
+        },
+        {
+          "reference": "Psalm 102:27",
+          "simplified": "You remain the same and your years never end",
+          "text": "But you remain the same, and your years will never end",
+          "correct": false
+        }
+      ],
+      "explanation": "This verse affirms Christ's unchanging nature - His character, promises, and power remain constant through all time.",
+      "category": "Jesus"
+    },
+    {
+      "id": 40,
+      "question": "Which verse teaches that the wages of sin is death?",
+      "options": [
+        {
+          "reference": "Romans 6:23",
+          "simplified": "Sin's payment is death, but God's gift is eternal life through Jesus",
+          "text": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord",
+          "correct": true
+        },
+        {
+          "reference": "James 1:15",
+          "simplified": "When sin is full-grown, it gives birth to death",
+          "text": "Then, after desire has conceived, it gives birth to sin; and sin, when it is full-grown, gives birth to death",
+          "correct": false
+        },
+        {
+          "reference": "Romans 5:12",
+          "simplified": "Sin entered through one man, and death through sin",
+          "text": "Therefore, just as sin entered the world through one man, and death through sin",
+          "correct": false
+        },
+        {
+          "reference": "Ezekiel 18:20",
+          "simplified": "The one who sins is the one who will die",
+          "text": "The one who sins is the one who will die",
+          "correct": false
+        }
+      ],
+      "explanation": "Paul contrasts sin's consequence (death) with God's free gift (eternal life), summarizing the gospel message.",
+      "category": "Sin"
+    },
+    {
+      "id": 41,
+      "question": "Which verse says the righteous will live by faith?",
+      "options": [
+        {
+          "reference": "Habakkuk 2:4",
+          "simplified": "The righteous person will live by their faithfulness",
+          "text": "But the righteous person will live by his faithfulness",
+          "correct": true
+        },
+        {
+          "reference": "Romans 1:17",
+          "simplified": "The righteous will live by faith",
+          "text": "For in the gospel the righteousness of God is revealed—a righteousness that is by faith from first to last, just as it is written: 'The righteous will live by faith'",
+          "correct": false
+        },
+        {
+          "reference": "Galatians 3:11",
+          "simplified": "No one is justified before God by the law; the righteous live by faith",
+          "text": "Clearly no one who relies on the law is justified before God, because 'the righteous will live by faith'",
+          "correct": false
+        },
+        {
+          "reference": "Hebrews 10:38",
+          "simplified": "My righteous one will live by faith",
+          "text": "But my righteous one will live by faith",
+          "correct": false
+        }
+      ],
+      "explanation": "This Old Testament verse became foundational for Paul's teaching on justification by faith, quoted multiple times in the New Testament.",
+      "category": "Faith"
+    },
+    {
+      "id": 42,
+      "question": "Which verse promises that God will supply all your needs?",
+      "options": [
+        {
+          "reference": "Philippians 4:19",
+          "simplified": "God will meet all your needs according to His glorious riches in Christ",
+          "text": "And my God will meet all your needs according to the riches of his glory in Christ Jesus",
+          "correct": true
+        },
+        {
+          "reference": "Psalm 23:1",
+          "simplified": "The Lord is my shepherd, I lack nothing",
+          "text": "The Lord is my shepherd, I lack nothing",
+          "correct": false
+        },
+        {
+          "reference": "Matthew 6:33",
+          "simplified": "Seek God's kingdom first and all these things will be given to you",
+          "text": "But seek first his kingdom and his righteousness, and all these things will be given to you as well",
+          "correct": false
+        },
+        {
+          "reference": "Luke 12:24",
+          "simplified": "God feeds the ravens; how much more valuable you are!",
+          "text": "Consider the ravens: They do not sow or reap... yet God feeds them. And how much more valuable you are than birds!",
+          "correct": false
+        }
+      ],
+      "explanation": "Paul thanks the Philippians for their support and assures them that God, who is infinitely rich, will provide for them.",
+      "category": "Provision"
     }
   ]
 }

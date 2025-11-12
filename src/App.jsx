@@ -5,7 +5,7 @@ import SearchBar from './components/SearchBar'
 import CategoryFilter from './components/CategoryFilter'
 import QuestionCard from './components/QuestionCard'
 import FeedbackModal from './components/FeedbackModal'
-
+import QuizView from './components/QuizView'
 function App() {
   // STATE: What data changes in your app?
   const [searchTerm, setSearchTerm] = useState('')
@@ -94,6 +94,12 @@ function App() {
         >
           ❓ Quiz
         </button>
+        <button
+          className={mode === 'community' ? 'mode-btn active' : 'mode-btn'}
+          onClick={() => setMode('community')}
+        >
+          👥 Community
+        </button>
       </nav>
 
     {mode === 'questions' && (
@@ -144,11 +150,15 @@ function App() {
     )}
 
         {mode === 'quiz' && (
-        <main className="mode-container">
-          <h2>❓ Quiz Mode</h2>
-        <p>Quiz Mode Coming Soon!</p>
-        </main>
+        <QuizView />
     )}
+
+      {mode === 'community' && (
+        <main className='mode-container'>
+          <h2>👥 Community</h2>
+          <p>Join the discussion and connect with others! COMING SOON!</p>
+        </main>
+      )}
      
 
       <button
