@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useAuth } from '../contexts/AuthContext'
 
 /* 
   FEEDBACK MODAL COMPONENT
@@ -10,6 +11,9 @@ import { useState } from 'react'
 */
 
 function FeedbackModal({ isOpen, onClose }) {
+  // Get authenticated user data
+  const { user, profile } = useAuth()
+
   // STATE: Store form data in an object
   // This is a common pattern for forms with multiple fields
   const [formData, setFormData] = useState({
@@ -17,6 +21,17 @@ function FeedbackModal({ isOpen, onClose }) {
     email: '',
     message: ''
   })
+
+  // Auto-fill name and email if user is logged in
+  useEffect(() => {
+    if (user && profile) {
+      setFormData(prev => ({
+        ...prev,
+        name: profile.display_name || user.email.split('@')[0],
+        email: user.email
+      }))
+    }
+  }, [user, profile])
 
   // STATE: Track errors for validation
   const [errors, setErrors] = useState({})
@@ -186,6 +201,7 @@ ${data.message}
                 onChange={handleChange}
                 className={errors.name ? 'error' : ''}
                 placeholder="Your name"
+                disabled={!!user}
               />
               {errors.name && <span className="error-message">{errors.name}</span>}
             </div>
@@ -201,6 +217,7 @@ ${data.message}
                 onChange={handleChange}
                 className={errors.email ? 'error' : ''}
                 placeholder="your.email@example.com"
+                disabled={!!user}
               />
               {errors.email && <span className="error-message">{errors.email}</span>}
             </div>

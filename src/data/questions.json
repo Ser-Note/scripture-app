@@ -600,6 +600,30 @@
           "text": "By this my Father is glorified, that you bear much fruit and so prove to be my disciples."
         }
       ]
+    },
+    {
+      "id": 29,
+      "caterogryId": 1,
+      "question": "Is baptism necessary for salvation?",
+      "answer": "Yes and No. Baptism is an important act of obedience and public declaration of faith in Jesus Christ. As a Catholic, Orthodox, or some Protestant traditions believe, baptism is necessary for salvation as it symbolizes the washing away of sins and the beginning of a new life in Christ. However, other Protestant denominations view baptism as an important step of obedience but not a requirement for salvation, which they believe is attained through faith alone. Ultimately, the necessity of baptism for salvation may vary depending on one's theological perspective. For example, the thief on the cross was promised paradise by Jesus despite not being baptized. This does not mean that just because you refuse baptism that you will go to heaven, but rather that baptism is not the sole determining factor of salvation. The thief on the cross never had the opportunity to get baptism, so rather than questioning whether or not you will be saved if your baptism, its rather more a question of the heart, why do you choose not to be baptized? Do you have the opportunity to become baptized? And if so, why do you choose not to be baptized? At the end of the day, that is the quetsion of the heart that matters most.",
+      "scriptures": [
+        {
+          "reference": "Mark 16:16",
+          "text": "Whoever believes and is baptized will be saved, but whoever does not believe will be condemned."
+        },
+        {
+          "reference": "Acts 2:38",
+          "text": "And Peter said to them, 'Repent and be baptized every one of you in the name of Jesus Christ for the forgiveness of your sins, and you will receive the gift of the Holy Spirit.'"
+        },
+        {
+          "reference": "Ephesians 2:8-9",
+          "text": "For by grace you have been saved through faith. And this is not your own doing; it is the gift of God, not a result of works, so that no one may boast."
+        },
+        {
+          "reference": "Luke 23:42-43",
+          "text": "And he said, 'Jesus, remember me when you come into your kingdom.' And he said to him, 'Truly, I say to you, today you will be with me in paradise.'"
+        }
+      ]
     }
   ]
 }

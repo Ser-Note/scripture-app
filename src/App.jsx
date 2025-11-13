@@ -6,11 +6,22 @@ import CategoryFilter from './components/CategoryFilter'
 import QuestionCard from './components/QuestionCard'
 import FeedbackModal from './components/FeedbackModal'
 import QuizView from './components/QuizView'
+import MemoryGame from './components/MemoryGame'
+import DissectionView from './components/DissectionView'
+import CommunityView from './components/Community.jsx'
+import Profile from './components/Profile'
+import AdminDashboard from './components/AdminDashboard'
+import Login from './components/Login'
+import InstallPrompt from './components/InstallPrompt'
+import { useAuth } from './contexts/AuthContext'
+
 function App() {
   // STATE: What data changes in your app?
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false)
+  const [isLoginOpen, setIsLoginOpen] = useState(false)
+  const { user, isAdmin, signOut } = useAuth()
   const [favorites, setFavorites] = useState([])
   const [isLoaded, setIsLoaded] = useState(false)
 
@@ -63,10 +74,29 @@ function App() {
 
   return (
     <div className="app">
+      {/* PWA INSTALL PROMPT */}
+      <InstallPrompt />
+      
       {/* HEADER */}
       <header className="app-header">
-        <h1>📖 Scripture Learning</h1>
-        <p>Strengthen your faith with God's Word</p>
+        <div className="header-content">
+          <div>
+            <h1>📖 Scripture Learning</h1>
+            <p>Strengthen your faith with God's Word</p>
+          </div>
+          <div className="auth-section">
+            {user ? (
+              <>
+                <span className="user-email">{user.email}</span>
+                <button onClick={signOut} className="logout-btn">Logout</button>
+              </>
+            ) : (
+              <button onClick={() => setIsLoginOpen(true)} className="login-btn">
+                🔐 Login
+              </button>
+            )}
+          </div>
+        </div>
       </header>
 
       <nav className="mode-nav">
@@ -100,6 +130,20 @@ function App() {
         >
           👥 Community
         </button>
+        <button
+          className={mode === 'profile' ? 'mode-btn active' : 'mode-btn'}
+          onClick={() => setMode('profile')}
+        >
+          👤 Profile
+        </button>
+        {isAdmin && (
+          <button
+            className={mode === 'admin' ? 'mode-btn active' : 'mode-btn'}
+            onClick={() => setMode('admin')}
+          >
+            👑 Admin
+          </button>
+        )}
       </nav>
 
     {mode === 'questions' && (
@@ -136,17 +180,11 @@ function App() {
     )}
 
     {mode === 'dissect' && (
-        <main className="mode-container">
-          <h2>📖 Scripture Dissection</h2>
-        <p>Dissection Mode Coming Soon!</p>
-        </main>
+        <DissectionView />
     )}
 
     {mode === 'memory' && (
-        <main className="mode-container">
-          <h2>🧠 Memory Verses</h2>
-        <p>Memory Game Coming Soon!</p>
-        </main>
+        <MemoryGame />
     )}
 
         {mode === 'quiz' && (
@@ -154,10 +192,15 @@ function App() {
     )}
 
       {mode === 'community' && (
-        <main className='mode-container'>
-          <h2>👥 Community</h2>
-          <p>Join the discussion and connect with others! COMING SOON!</p>
-        </main>
+        <CommunityView />
+      )}
+
+      {mode === 'profile' && (
+        <Profile />
+      )}
+
+      {mode === 'admin' && (
+        <AdminDashboard />
       )}
      
 
@@ -173,6 +216,11 @@ function App() {
         isOpen={isFeedbackOpen}
         onClose={() => setIsFeedbackOpen(false)}
       />
+
+      {/* LOGIN MODAL */}
+      {isLoginOpen && (
+        <Login onClose={() => setIsLoginOpen(false)} />
+      )}
     </div>
   )
 }

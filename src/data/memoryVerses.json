@@ -95,6 +95,38 @@
       "difficulty": "medium",
       "category": "Priorities",
       "hint": "Seek first the kingdom"
+    },
+    {
+      "id": 13,
+      "reference": "Galatians 5:22-23",
+      "text": "But the fruit of the Spirit is love joy peace forbearance kindness goodness faithfulness gentleness and self control",
+      "difficulty": "hard",
+      "category": "Fruit of the Spirit",
+      "hint": "List of the fruit of the Spirit"
+    },
+    {
+      "id": 14,
+      "reference": "Hebrews 11:1",
+      "text": "Now faith is confidence in what we hope for and assurance about what we do not see",
+      "difficulty": "medium",
+      "category": "Faith",
+      "hint": "Definition of faith"
+    },
+    {
+      "id": 15,
+      "reference": "2 Timothy 1:7",
+      "text": "For the Spirit God gave us does not make us timid but gives us power love and self discipline",
+      "difficulty": "easy",
+      "category": "Courage",
+      "hint": "Spirit gives power love and self discipline"
+    },
+    {
+      "id": 16,
+      "reference": "Matthew 7:21-23",
+      "text": "Not every one that saith unto me, Lord, Lord, shall enter into the kingdom of heaven; but he that doeth the will of my Father which is in heaven. Many will say to me in that day, Lord, Lord, have we not prophesied in thy name? and in thy name have cast out devils? and in thy name done many wonderful works? And then will I profess unto them, I never knew you: depart from me, ye that work iniquity.",
+      "difficulty": "hard",
+      "category": "Obedience",
+      "hint": "Doing the will of the Father"
     }
   ]
 }

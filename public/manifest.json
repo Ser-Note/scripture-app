@@ -1,12 +1,12 @@
 {
   "name": "Scripture Learning App",
   "short_name": "Scripture",
-  "description": "Learn and memorize scripture to strengthen your faith",
+  "description": "Learn scripture through interactive modes - Questions, Dissect, Memory, Quiz, and Community",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#667eea",
   "theme_color": "#667eea",
-  "orientation": "portrait",
+  "orientation": "portrait-primary",
   "icons": [
     {
       "src": "/icon-192.png",
@@ -19,6 +19,23 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "lifestyle", "productivity"],
+  "shortcuts": [
+    {
+      "name": "Community",
+      "short_name": "Community",
+      "description": "View community posts",
+      "url": "/?mode=community",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Quiz",
+      "short_name": "Quiz",
+      "description": "Test your knowledge",
+      "url": "/?mode=quiz",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
     }
   ]
 }
