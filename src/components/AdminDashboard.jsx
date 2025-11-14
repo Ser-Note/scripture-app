@@ -202,6 +202,7 @@ function AdminDashboard() {
           <h2>👥 All Users ({users.length})</h2>
           <p className="section-description">Manage user roles and access</p>
           
+          {/* Desktop Table View */}
           <div className="users-table">
             <table>
               <thead>
@@ -294,6 +295,84 @@ function AdminDashboard() {
                 ))}
               </tbody>
             </table>
+          </div>
+
+          {/* Mobile Card View */}
+          <div className="users-mobile-cards">
+            {users.map(usr => (
+              <div key={usr.id} className="user-card">
+                <div className="user-card-header">
+                  <div className="user-avatar-small">
+                    {usr.avatar_url ? (
+                      <img src={usr.avatar_url} alt="" />
+                    ) : (
+                      <div className="avatar-placeholder-small">
+                        {(usr.display_name || usr.email)?.[0]?.toUpperCase()}
+                      </div>
+                    )}
+                  </div>
+                  <div className="user-info">
+                    <h3 
+                      className="clickable-username"
+                      onClick={() => setSelectedUserId(usr.id)}
+                      title="View profile"
+                    >
+                      {usr.display_name || 'No name'}
+                      {usr.id === user.id && <span className="you-label"> (You)</span>}
+                    </h3>
+                    <p className="user-email-small">{usr.email}</p>
+                  </div>
+                </div>
+                
+                <div className="user-details">
+                  <span className="user-detail">
+                    <strong>Joined:</strong> {new Date(usr.created_at).toLocaleDateString()}
+                  </span>
+                  {usr.role === 'admin' ? (
+                    <span className="role-badge admin">👑 Admin</span>
+                  ) : usr.role === 'user' ? (
+                    <span className="role-badge user">👤 User</span>
+                  ) : (
+                    <span className="role-badge pending">⏳ Pending</span>
+                  )}
+                </div>
+
+                {usr.id !== user.id && (
+                  <div className="user-actions">
+                    {usr.role !== 'admin' && (
+                      <button
+                        onClick={() => updateUserRole(usr.id, 'admin')}
+                        className="approve-btn"
+                      >
+                        👑 Make Admin
+                      </button>
+                    )}
+                    {usr.role === 'admin' && (
+                      <button
+                        onClick={() => updateUserRole(usr.id, 'user')}
+                        className="approve-btn"
+                      >
+                        👤 Remove Admin
+                      </button>
+                    )}
+                    {!usr.role && (
+                      <button
+                        onClick={() => updateUserRole(usr.id, 'user')}
+                        className="approve-btn"
+                      >
+                        ✅ Approve User
+                      </button>
+                    )}
+                    <button
+                      onClick={() => deleteUser(usr.id, usr.email)}
+                      className="reject-btn"
+                    >
+                      🗑️ Delete User
+                    </button>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
 
