@@ -8,6 +8,13 @@
   flex-direction: column;
 }
 
+/* Mobile Safari fixes */
+@supports (-webkit-touch-callout: none) {
+  .app {
+    min-height: -webkit-fill-available;
+  }
+}
+
 /* HEADER */
 .app-header {
   text-align: center;
@@ -259,6 +266,8 @@
   z-index: 1000;
   padding: 20px;
   animation: fadeIn 0.2s ease-out;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 @keyframes fadeIn {
@@ -278,8 +287,10 @@
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   animation: slideUp 0.3s ease-out;
+  margin: auto;
 }
 
 @keyframes slideUp {
@@ -449,26 +460,153 @@
 }
 
 /* RESPONSIVE DESIGN */
+/* iPad (portrait and landscape) */
+@media (max-width: 1024px) {
+  .app {
+    padding: 15px;
+  }
+  
+  .modal-content {
+    max-width: 90%;
+  }
+  
+  .users-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+/* iPhone and small tablets */
 @media (max-width: 768px) {
+  .app {
+    padding: 10px;
+  }
+  
+  .app-header {
+    padding: 20px 15px;
+    margin-bottom: 20px;
+  }
+  
   .app-header h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .app-header p {
+    font-size: 1rem;
   }
 
   .controls {
-    padding: 20px;
+    padding: 15px;
+    margin-bottom: 20px;
   }
 
   .category-filter {
+    justify-content: center;
     gap: 8px;
   }
 
   .category-btn {
-    padding: 8px 15px;
+    padding: 10px 16px;
     font-size: 0.9rem;
+    min-height: 44px;
   }
 
   .question-header h3 {
     font-size: 1rem;
+  }
+  
+  .question-content {
+    padding: 15px;
+  }
+  
+  /* Modal improvements */
+  .modal-overlay {
+    padding: 10px;
+    align-items: flex-start;
+  }
+  
+  .modal-content {
+    max-height: 85vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+  }
+  
+  .modal-header {
+    padding: 20px 15px;
+  }
+  
+  .modal-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  .feedback-form {
+    padding: 20px 15px;
+  }
+  
+  /* Button improvements for touch */
+  .submit-btn,
+  .next-btn,
+  .restart-btn,
+  .nav-btn,
+  .mode-btn,
+  .login-btn,
+  .logout-btn {
+    min-height: 44px;
+    font-size: 1rem;
+  }
+  
+  /* Form inputs - prevent iOS zoom */
+  .search-input,
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  
+  /* Prevent iOS zoom on input focus */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
+/* iPhone SE and smaller */
+@media (max-width: 375px) {
+  .app {
+    padding: 8px;
+  }
+  
+  .app-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .app-header p {
+    font-size: 0.9rem;
+  }
+  
+  .controls {
+    padding: 12px;
+  }
+  
+  .category-btn {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .question-card {
+    margin-bottom: 10px;
+  }
+  
+  .modal-content {
+    border-radius: 8px;
+  }
+  
+  .modal-header h2 {
+    font-size: 1.2rem;
   }
 }
 
@@ -2473,8 +2611,29 @@
   margin-bottom: 0;
 }
 
-/* RESPONSIVE */
+/* Quiz & Game Mobile Responsive */
 @media (max-width: 768px) {
+  .install-prompt-banner {
+    padding: 15px;
+  }
+
+  .install-prompt-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .install-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .install-btn,
+  .dismiss-btn {
+    width: 100%;
+    min-height: 44px;
+  }
+
   .quiz-container {
     padding: 20px 15px;
   }
@@ -2595,6 +2754,90 @@
 
   .legend-item {
     flex-basis: calc(50% - 5px);
+  }
+  
+  /* Community Styles */
+  .community-container {
+    padding: 20px 10px;
+  }
+  
+  .category-filters {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .submission-card {
+    padding: 15px;
+  }
+
+  .submission-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .comments-section {
+    padding: 15px;
+  }
+
+  .comment-card {
+    padding: 12px;
+  }
+
+  .create-post-form {
+    padding: 15px;
+  }
+  
+  .post-textarea,
+  .comment-input {
+    font-size: 16px;
+    min-height: 100px;
+  }
+  
+  .submit-post-btn,
+  .add-comment-btn,
+  .toggle-comments-btn {
+    min-height: 44px;
+    font-size: 1rem;
+  }
+  
+  .edit-btn,
+  .delete-btn,
+  .save-btn,
+  .cancel-btn {
+    min-height: 40px;
+    padding: 10px 16px;
+  }
+  
+  .welcome-modal {
+    max-width: 95%;
+  }
+  
+  .welcome-modal-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .welcome-message {
+    font-size: 0.95rem;
+  }
+  
+  .welcome-modal-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .dont-show-btn,
+  .got-it-btn {
+    width: 100%;
+    min-height: 44px;
+  }
+  
+  .login-modal .modal-content {
+    max-width: 95%;
+  }
+  
+  .login-form input {
+    font-size: 16px;
   }
 }
 
@@ -2917,14 +3160,19 @@
 
 /* Profile Responsive */
 @media (max-width: 768px) {
+  .profile-view {
+    padding: 20px 10px;
+  }
+  
   .profile-container {
-    padding: 25px 20px;
+    padding: 20px 15px;
   }
 
   .profile-header {
     flex-direction: column;
     text-align: center;
     gap: 20px;
+    padding-bottom: 20px;
   }
 
   .profile-info h1 {
@@ -2937,14 +3185,28 @@
     height: 100px;
     font-size: 2.5rem;
   }
+  
+  .profile-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 
   .profile-edit-actions {
     flex-direction: column;
+    gap: 10px;
   }
 
   .cancel-btn,
-  .save-btn {
+  .save-btn,
+  .edit-profile-btn,
+  .upload-btn {
     width: 100%;
+    min-height: 44px;
+  }
+  
+  .profile-edit-form input,
+  .profile-edit-form textarea {
+    font-size: 16px;
   }
 }
 
@@ -3343,24 +3605,45 @@ td {
 
 /* Admin Responsive */
 @media (max-width: 768px) {
+  .admin-view {
+    padding: 20px 10px;
+  }
+  
+  .admin-container {
+    padding: 0;
+    gap: 30px;
+  }
+  
   .admin-header h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .admin-header p {
+    font-size: 0.95rem;
   }
 
   .users-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .admin-stats {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .users-table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   table {
-    font-size: 0.875rem;
+    font-size: 0.85rem;
+    min-width: 600px;
   }
 
   th, td {
-    padding: 8px;
+    padding: 10px 8px;
   }
 
   .table-user span {
@@ -3369,6 +3652,36 @@ td {
 
   .stat-number {
     font-size: 2rem;
+  }
+  
+  .table-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .action-btn {
+    min-height: 36px;
+    font-size: 0.85rem;
+    width: 100%;
+  }
+  
+  .approve-btn,
+  .reject-btn {
+    min-height: 40px;
+    font-size: 0.9rem;
+  }
+  
+  .user-card {
+    padding: 15px;
+  }
+  
+  .user-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .user-actions button {
+    width: 100%;
   }
 }
 
@@ -3567,19 +3880,48 @@ td {
 @media (max-width: 768px) {
   .user-profile-modal {
     width: 95%;
-    max-height: 90vh;
+    max-width: 95%;
+    max-height: 85vh;
+    padding: 15px;
+  }
+  
+  .user-profile-modal .close-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.3rem;
   }
 
   .stats-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
   }
 
   .user-profile-header {
-    padding: 40px 20px 20px;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 15px;
+  }
+  
+  .user-profile-avatar-large {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .avatar-placeholder-large {
+    width: 100px;
+    height: 100px;
+    font-size: 2.5rem;
   }
 
   .user-profile-content {
-    padding: 20px;
+    padding: 15px;
+  }
+  
+  .activity-list {
+    gap: 12px;
+  }
+  
+  .activity-item {
+    padding: 12px;
   }
 }
