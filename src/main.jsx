@@ -5,6 +5,8 @@ import './styles/index.css'
 import { AuthProvider } from './contexts/AuthContext'
 import { BookmarksProvider } from './contexts/BookmarksContext'
 import { ThemeProvider } from './contexts/ThemeContext'
+import { LikesProvider } from './contexts/LikesContext'
+import { AnnouncementsProvider } from './contexts/AnnouncementsContext'
 
 // Register Service Worker for PWA functionality
 if ('serviceWorker' in navigator) {
@@ -30,7 +32,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <ThemeProvider>
       <AuthProvider>
         <BookmarksProvider>
-          <App />
+          <LikesProvider>
+            <AnnouncementsProvider>
+              <App />
+            </AnnouncementsProvider>
+          </LikesProvider>
         </BookmarksProvider>
       </AuthProvider>
     </ThemeProvider>

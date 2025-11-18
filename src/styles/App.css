@@ -1,3 +1,164 @@
+/* ANNOUNCEMENTS */
+.announcements-view {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  padding: 24px;
+  background: #f7fafc;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(102,126,234,0.08);
+}
+.announcements-view h2 {
+  font-size: 1.5rem;
+  color: #667eea;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+.announcement-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.announcement-form input,
+.announcement-form textarea {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 2px solid #e2e8f0;
+  font-size: 1rem;
+  resize: vertical;
+}
+.announcement-form button {
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+.announcement-form button:hover {
+  background: #5a67d8;
+}
+.announcements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.announcement-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(102,126,234,0.08);
+  padding: 18px 20px 14px 20px;
+  border-left: 5px solid #a0aec0;
+  position: relative;
+}
+.announcement-card.pinned {
+  border-left: 5px solid #f6ad55;
+  box-shadow: 0 4px 16px rgba(246,173,85,0.12);
+}
+.announcement-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+.announcement-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+.announcement-pin {
+  font-size: 1.2rem;
+  color: #f6ad55;
+}
+.announcement-message {
+  font-size: 1.08rem;
+  color: #4a5568;
+  margin-bottom: 8px;
+}
+.announcement-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.98rem;
+  color: #718096;
+}
+.announcement-footer button {
+  background: #e2e8f0;
+  color: #2d3748;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: 0.97rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.announcement-footer button:hover {
+  background: #cbd5e1;
+}
+.like-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #718096;
+  padding: 4px 10px;
+  border-radius: 8px;
+  transition: color 0.2s, box-shadow 0.2s, background 0.2s, transform 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.like-btn .like-count {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-left: 2px;
+}
+.like-btn.liked {
+  color: #48bb78;
+  background: linear-gradient(90deg, #e6fffa 60%, #c6f6d5 100%);
+  box-shadow: 0 2px 8px rgba(72, 187, 120, 0.15);
+  transform: scale(1.12);
+}
+.like-btn.liked .like-count {
+  color: #22543d;
+}
+/* VERSE OF THE DAY */
+.verse-of-day {
+  background: linear-gradient(90deg, #f7fafc 60%, #e0e7ff 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(102,126,234,0.08);
+  padding: 32px 24px 24px 24px;
+  margin-bottom: 32px;
+  text-align: center;
+  border-left: 6px solid #667eea;
+  position: relative;
+}
+.verse-of-day h2 {
+  font-size: 1.6rem;
+  color: #667eea;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.verse-of-day .verse-ref {
+  font-size: 1.15rem;
+  color: #4a5568;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.verse-of-day .verse-text {
+  font-size: 1.25rem;
+  color: #2d3748;
+  font-style: italic;
+  margin-bottom: 0;
+  font-weight: 500;
+  text-shadow: 0 2px 8px rgba(102,126,234,0.08);
+}
 /* APP CONTAINER */
 .app {
   max-width: 900px;

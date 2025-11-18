@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import { useBookmarks } from '../contexts/BookmarksContext'
+import LikeButton from './LikeButton'
 
 // QUESTION CARD COMPONENT
 // Displays a question and toggles to show the answer and scriptures
 function QuestionCard({ question, questionIndex }) {
+  // Hooks must be top-level
   const { isBookmarked, toggleBookmark } = useBookmarks()
-  // LOCAL STATE: Each card tracks if it's expanded or not
   const [isExpanded, setIsExpanded] = useState(false)
 
   const handleToggleBookmark = async (e) => {
@@ -28,9 +29,11 @@ function QuestionCard({ question, questionIndex }) {
       <div 
         className="question-header"
         onClick={() => setIsExpanded(!isExpanded)}
+        style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
       >
-        <h3>{question.question}</h3>
-        <div className="header-icons">
+        <h3 style={{ flex: 1 }}>{question.question}</h3>
+        <div className="header-icons" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <LikeButton itemType="question" itemId={`question-${question.id || questionIndex}`} />
           <button
             className="favorite-btn"
             onClick={handleToggleBookmark}
@@ -38,13 +41,7 @@ function QuestionCard({ question, questionIndex }) {
           >
             {bookmarked ? '★' : '☆'}
           </button>
-
-        
-
-
-        
           <span className="toggle-icon">{isExpanded ? '▲' : '▼'}</span>
-        
         </div>
       </div>
 
@@ -60,9 +57,8 @@ function QuestionCard({ question, questionIndex }) {
             <h4>Supporting Scripture:</h4>
             {question.scriptures.map((scripture, index) => {
               const verseId = `question-scripture-${question.id || questionIndex}-${scripture.reference}`
-              const { isBookmarked, toggleBookmark } = useBookmarks()
-              const bookmarked = isBookmarked('verse', verseId)
-              const handleToggleBookmark = async (e) => {
+              const verseBookmarked = isBookmarked('verse', verseId)
+              const handleVerseBookmark = async (e) => {
                 e.stopPropagation()
                 await toggleBookmark('verse', verseId, {
                   reference: scripture.reference,
@@ -76,11 +72,11 @@ function QuestionCard({ question, questionIndex }) {
                   <p style={{ margin: '0 8px' }}>&quot;{scripture.text}&quot;</p>
                   <button
                     className="favorite-btn"
-                    onClick={handleToggleBookmark}
-                    title={bookmarked ? 'Remove bookmark' : 'Bookmark this verse'}
+                    onClick={handleVerseBookmark}
+                    title={verseBookmarked ? 'Remove bookmark' : 'Bookmark this verse'}
                     style={{ fontSize: '1em', marginLeft: '4px' }}
                   >
-                    {bookmarked ? '★' : '☆'}
+                    {verseBookmarked ? '★' : '☆'}
                   </button>
                 </div>
               )

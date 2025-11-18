@@ -101,12 +101,10 @@ function UserProfile({ userId, onClose }) {
         </div>
 
         <div className="user-profile-content">
-          {profile.bio && (
-            <div className="user-profile-section">
-              <h3>📝 Bio</h3>
-              <p>{profile.bio}</p>
-            </div>
-          )}
+          <div className="user-profile-section">
+            <h3>📝 Bio</h3>
+            <p>{profile.bio || 'No bio added yet.'}</p>
+          </div>
 
           <div className="user-profile-section">
             <h3>📊 Activity Stats</h3>

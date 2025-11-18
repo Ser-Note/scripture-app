@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './styles/App.css'
 import data from './data/questions.json'
+import memoryData from './data/memoryVerses.json'
 import SearchBar from './components/SearchBar'
 import CategoryFilter from './components/CategoryFilter'
 import QuestionCard from './components/QuestionCard'
@@ -11,6 +12,7 @@ import DissectionView from './components/DissectionView'
 import CommunityView from './components/Community.jsx'
 import Profile from './components/Profile'
 import AdminDashboard from './components/AdminDashboard'
+import Announcements from './components/Announcements'
 import Bookmarks from './components/Bookmarks'
 import Login from './components/Login'
 import InstallPrompt from './components/InstallPrompt'
@@ -28,16 +30,26 @@ function App() {
 
   const [mode, setMode] = useState('questions')
 
+  // VERSE OF THE DAY
+  const [verseOfDay, setVerseOfDay] = useState(null)
+  useEffect(() => {
+    // Pick a verse based on the date for consistency
+    const verses = memoryData.memoryVerses
+    if (verses && verses.length > 0) {
+      const today = new Date()
+      const idx = today.getFullYear() + today.getMonth() + today.getDate()
+      setVerseOfDay(verses[idx % verses.length])
+    }
+  }, [])
+
   // FILTER LOGIC: Show questions based on search and category
   const filteredQuestions = data.questions.filter(question => {
     // Check if question matches search term
     const matchesSearch = question.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          question.answer.toLowerCase().includes(searchTerm.toLowerCase())
-    
     // Check if question matches selected category
     const matchesCategory = selectedCategory === 'all' || 
                            question.categoryId === parseInt(selectedCategory)
-    
     return matchesSearch && matchesCategory
   })
 
@@ -45,7 +57,16 @@ function App() {
     <div className="app">
       {/* PWA INSTALL PROMPT */}
       <InstallPrompt />
-      
+
+      {/* VERSE OF THE DAY */}
+      {verseOfDay && (
+        <div className="verse-of-day">
+          <h2>📜 Verse of the Day</h2>
+          <div className="verse-ref">{verseOfDay.reference}</div>
+          <div className="verse-text">"{verseOfDay.text}"</div>
+        </div>
+      )}
+
       {/* HEADER */}
       <header className="app-header">
         <div className="header-content">
@@ -118,6 +139,12 @@ function App() {
         >
           👤 Profile
         </button>
+        <button
+          className={mode === 'announcements' ? 'mode-btn active' : 'mode-btn'}
+          onClick={() => setMode('announcements')}
+        >
+          📢 Announcements
+        </button>
         {isAdmin && (
           <button
             className={mode === 'admin' ? 'mode-btn active' : 'mode-btn'}
@@ -182,6 +209,10 @@ function App() {
 
       {mode === 'profile' && (
         <Profile />
+      )}
+
+      {mode === 'announcements' && (
+        <Announcements />
       )}
 
       {mode === 'admin' && (
