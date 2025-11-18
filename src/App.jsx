@@ -11,9 +11,11 @@ import DissectionView from './components/DissectionView'
 import CommunityView from './components/Community.jsx'
 import Profile from './components/Profile'
 import AdminDashboard from './components/AdminDashboard'
+import Bookmarks from './components/Bookmarks'
 import Login from './components/Login'
 import InstallPrompt from './components/InstallPrompt'
 import { useAuth } from './contexts/AuthContext'
+import { useTheme } from './contexts/ThemeContext'
 
 function App() {
   // STATE: What data changes in your app?
@@ -22,42 +24,9 @@ function App() {
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false)
   const [isLoginOpen, setIsLoginOpen] = useState(false)
   const { user, isAdmin, signOut } = useAuth()
-  const [favorites, setFavorites] = useState([])
-  const [isLoaded, setIsLoaded] = useState(false)
+  const { theme, toggleTheme, isDark } = useTheme()
 
   const [mode, setMode] = useState('questions')
-
-  const toggleFavorite = (questionId) => 
-  {
-    if (favorites.includes(questionId)) 
-    {
-      const newFavorites = favorites.filter(id => id !== questionId)
-      setFavorites(newFavorites)
-      console.log("Removed! New favorites:", newFavorites)
-    } else
-    {
-        const newFavorites = [...favorites, questionId]
-        setFavorites(newFavorites)
-        console.log("Added! New favorites:", newFavorites)
-    }
-  }
-
-  useEffect(() => 
-  {
-    const savedFavorites = localStorage.getItem('scriptureAppFavorites')
-    if (savedFavorites) {
-      setFavorites(JSON.parse(savedFavorites))
-    }
-  }, [])
-
-  useEffect(() => {
-    if(isLoaded) 
-    {
-      localStorage.setItem('scriptureAppFavorites', JSON.stringify(favorites))
-    } else {
-      setIsLoaded(true)
-    }
-  }, [favorites])
 
   // FILTER LOGIC: Show questions based on search and category
   const filteredQuestions = data.questions.filter(question => {
@@ -85,6 +54,13 @@ function App() {
             <p>Strengthen your faith with God's Word</p>
           </div>
           <div className="auth-section">
+            <button 
+              onClick={toggleTheme} 
+              className="theme-toggle-btn"
+              title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              {isDark ? '☀️' : '🌙'}
+            </button>
             {user ? (
               <>
                 <span className="user-email">{user.email}</span>
@@ -131,6 +107,12 @@ function App() {
           👥 Community
         </button>
         <button
+          className={mode === 'bookmarks' ? 'mode-btn active' : 'mode-btn'}
+          onClick={() => setMode('bookmarks')}
+        >
+          ⭐ Bookmarks
+        </button>
+        <button
           className={mode === 'profile' ? 'mode-btn active' : 'mode-btn'}
           onClick={() => setMode('profile')}
         >
@@ -166,12 +148,11 @@ function App() {
         {filteredQuestions.length === 0 ? (
           <p className="no-results">No questions found. Try a different search or category.</p>
         ) : (
-          filteredQuestions.map(question => (
+          filteredQuestions.map((question, index) => (
             <QuestionCard 
               key={question.id} 
-              question={question} 
-              isFavorited={favorites.includes(question.id)}
-              onToggleFavorite={toggleFavorite}
+              question={question}
+              questionIndex={index}
             />
           ))
         )}
@@ -193,6 +174,10 @@ function App() {
 
       {mode === 'community' && (
         <CommunityView />
+      )}
+
+      {mode === 'bookmarks' && (
+        <Bookmarks />
       )}
 
       {mode === 'profile' && (

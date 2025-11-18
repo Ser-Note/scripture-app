@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import memoryData from '../data/memoryVerses.json'
+import { useBookmarks } from '../contexts/BookmarksContext'
 
 function MemoryGame() {
   const [currentVerseIndex, setCurrentVerseIndex] = useState(0)
@@ -9,9 +10,21 @@ function MemoryGame() {
   const [isCorrect, setIsCorrect] = useState(false)
   const [showHint, setShowHint] = useState(false)
   const [difficultyFilter, setDifficultyFilter] = useState('all')
+  const { isBookmarked, toggleBookmark } = useBookmarks()
 
   // Get current verse
   const currentVerse = memoryData.memoryVerses[currentVerseIndex]
+
+    // Bookmark logic
+    const verseId = `memory-${currentVerse.id || currentVerse.reference}`
+    const bookmarked = isBookmarked('verse', verseId)
+    const handleToggleBookmark = async () => {
+      await toggleBookmark('verse', verseId, {
+        reference: currentVerse.reference,
+        text: currentVerse.text,
+        id: currentVerse.id || currentVerse.reference
+      })
+    }
 
   // Shuffle words when verse changes
   useEffect(() => {
@@ -89,13 +102,19 @@ function MemoryGame() {
       </div>
 
       {/* Verse Info */}
-      <div className="verse-info">
-        <span className="verse-reference">{currentVerse.reference}</span>
-        <span className={`difficulty-badge ${currentVerse.difficulty}`}>
-          {currentVerse.difficulty}
-        </span>
-        <span className="verse-category">{currentVerse.category}</span>
-      </div>
+        <div className="verse-info">
+          <span className="verse-reference">{currentVerse.reference}</span>
+          <button
+            className="favorite-btn"
+            onClick={handleToggleBookmark}
+            title={bookmarked ? 'Remove bookmark' : 'Bookmark this verse'}
+            style={{ marginLeft: '10px', fontSize: '1.2em' }}
+          >
+            {bookmarked ? '★' : '☆'}
+          </button>
+          <span className={`difficulty-badge ${currentVerse.difficulty}`}>{currentVerse.difficulty}</span>
+          <span className="verse-category">{currentVerse.category}</span>
+        </div>
 
       {/* Progress */}
       <div className="memory-progress">

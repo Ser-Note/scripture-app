@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './styles/index.css'
 import { AuthProvider } from './contexts/AuthContext'
+import { BookmarksProvider } from './contexts/BookmarksContext'
+import { ThemeProvider } from './contexts/ThemeContext'
 
 // Register Service Worker for PWA functionality
 if ('serviceWorker' in navigator) {
@@ -25,8 +27,12 @@ if ('serviceWorker' in navigator) {
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AuthProvider>
-      <App />
-    </AuthProvider>
+    <ThemeProvider>
+      <AuthProvider>
+        <BookmarksProvider>
+          <App />
+        </BookmarksProvider>
+      </AuthProvider>
+    </ThemeProvider>
   </React.StrictMode>,
 )

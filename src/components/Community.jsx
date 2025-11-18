@@ -66,6 +66,7 @@ function CommunityView() {
             let query = supabase
                 .from('community')
                 .select('*')
+                .order('is_pinned', { ascending: false })  // Pinned posts first
                 .order('created_at', { ascending: false })
             
             // FILTER: Add category filter if not "All"
@@ -163,6 +164,27 @@ function CommunityView() {
         fetchSubmissions()
       } catch (err) {
         console.error('Error deleting:', err)
+      }
+    }
+    
+    // PIN: Toggle pin status (admin only)
+    const togglePin = async (id, currentPinStatus) => {
+      if (!isAdmin) {
+        alert("Only admins can pin posts")
+        return
+      }
+
+      try {
+        const { error} = await supabase
+          .from('community')
+          .update({ is_pinned: !currentPinStatus })
+          .eq('id', id)
+        
+        if (error) throw error
+        fetchSubmissions()
+      } catch (err) {
+        console.error('Error toggling pin:', err)
+        alert('Failed to pin/unpin post')
       }
     }
     
@@ -477,7 +499,14 @@ function CommunityView() {
       {/* SUBMISSIONS LIST */}
       <div className="submissions-list">
         {submissions.map(sub => (
-          <div key={sub.id} className="submission-card">
+          <div key={sub.id} className={`submission-card ${sub.is_pinned ? 'pinned' : ''}`}>
+            {/* PINNED BADGE */}
+            {sub.is_pinned && (
+              <div className="pinned-badge">
+                📌 Pinned Announcement
+              </div>
+            )}
+            
             <div className="submission-header">
               <div>
                 <h3 
@@ -601,6 +630,15 @@ function CommunityView() {
                     className="edit-btn"
                   >
                     ✏️ Edit
+                  </button>
+                )}
+                {isAdmin && (
+                  <button 
+                    onClick={() => togglePin(sub.id, sub.is_pinned)}
+                    className="pin-btn"
+                    title={sub.is_pinned ? 'Unpin post' : 'Pin post'}
+                  >
+                    {sub.is_pinned ? '📌 Unpin' : '📌 Pin'}
                   </button>
                 )}
                 <button 

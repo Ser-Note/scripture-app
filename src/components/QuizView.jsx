@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import quizData from '../data/quizzes.json'
+import { useBookmarks } from '../contexts/BookmarksContext'
 
 const shuffleArray = (array) => {
     const shuffled = [...array]  // 1. Create a copy to avoid mutating original
@@ -18,6 +19,7 @@ function QuizView() {
   const [showExplanation, setShowExplanation] = useState(false)  
   const [quizComplete, setQuizComplete] = useState(false)
   const [shuffledOptions, setShuffledOptions] = useState([])
+  const { isBookmarked, toggleBookmark } = useBookmarks()
 
   // Get current question
   const currentQuestion = quizData.quizzes[currentQuestionIndex]
@@ -74,23 +76,49 @@ const handleRestart = () => {
 
             {/* Answer Options */}
            <div className="quiz-options">
-            {shuffledOptions.map((option, index) => (
+            {shuffledOptions.map((option, index) => {
+              const verseId = `quiz-${option.reference}`
+              const bookmarked = isBookmarked('verse', verseId)
+              const handleToggleBookmark = async (e) => {
+                e.stopPropagation()
+                await toggleBookmark('verse', verseId, {
+                  reference: option.reference,
+                  text: option.simplified,
+                  id: option.reference
+                })
+              }
+              return (
                 <button
-                key={index}
-                className={`quiz-option ${
+                  key={index}
+                  className={`quiz-option ${
                     selectedAnswer === index 
-                    ? option.correct 
+                      ? option.correct 
                         ? 'correct' 
                         : 'incorrect'
-                    : ''
-                }`}
-                onClick={() => handleAnswerClick(index, option.correct)}
-                disabled={selectedAnswer !== null}
+                      : ''
+                  }`}
+                  onClick={() => handleAnswerClick(index, option.correct)}
+                  disabled={selectedAnswer !== null}
+                  style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
                 >
-                <div className="option-reference">{option.reference}</div>
-                <div className="option-text">{option.simplified}</div>
+                  <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+                    <div className="option-reference">{option.reference}</div>
+                    <div className="option-text">{option.simplified}</div>
+                  </div>
+                  <span style={{ display: 'flex', alignItems: 'center' }}>
+                    <button
+                      className="favorite-btn"
+                      onClick={e => { e.stopPropagation(); handleToggleBookmark(e); }}
+                      title={bookmarked ? 'Remove bookmark' : 'Bookmark this verse'}
+                      tabIndex={-1}
+                      style={{ marginLeft: '12px', fontSize: '1.3em' }}
+                    >
+                      {bookmarked ? '★' : '☆'}
+                    </button>
+                  </span>
                 </button>
-            ))}
+              )
+            })}
             </div>
             {/* Explanation & Next Button */}
             {showExplanation && (

@@ -1,11 +1,24 @@
 import { useState } from 'react'
 import dissectionData from '../data/dissections.json'
+import { useBookmarks } from '../contexts/BookmarksContext'
 
 function DissectionView() {
   const [currentDissectionIndex, setCurrentDissectionIndex] = useState(0)
   const [selectedBreakdown, setSelectedBreakdown] = useState(null)
+  const { isBookmarked, toggleBookmark } = useBookmarks()
 
   const currentDissection = dissectionData.dissections[currentDissectionIndex]
+
+    // Bookmark logic
+    const verseId = `dissection-${currentDissection.id}`
+    const bookmarked = isBookmarked('verse', verseId)
+    const handleToggleBookmark = async () => {
+      await toggleBookmark('verse', verseId, {
+        reference: currentDissection.reference,
+        text: currentDissection.verse,
+        id: currentDissection.id
+      })
+    }
 
   // Handle clicking on a breakdown item
   const handleBreakdownClick = (index) => {
@@ -67,9 +80,18 @@ function DissectionView() {
       </div>
 
       {/* Reference */}
-      <div className="dissection-reference">
-        <span className="reference-badge">{currentDissection.reference}</span>
-      </div>
+
+        <div className="dissection-reference">
+          <span className="reference-badge">{currentDissection.reference}</span>
+          <button
+            className="favorite-btn"
+            onClick={handleToggleBookmark}
+            title={bookmarked ? 'Remove bookmark' : 'Bookmark this verse'}
+            style={{ marginLeft: '10px', fontSize: '1.2em' }}
+          >
+            {bookmarked ? '★' : '☆'}
+          </button>
+        </div>
 
       {/* Full Verse */}
       <div className="full-verse">
