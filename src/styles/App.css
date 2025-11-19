@@ -1,3 +1,23 @@
+/* Responsive and theme-adaptive admin table for mobile */
+@media (max-width: 600px) {
+  table.admin-table {
+    display: block;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  table.admin-table th,
+  table.admin-table td {
+    white-space: nowrap;
+    padding: 10px 8px;
+    font-size: 0.97rem;
+  }
+}
+[data-theme="dark"] table.admin-table {
+  background: #23272f !important;
+}
 [data-theme="dark"] table {
   background: #23272f !important;
 }
