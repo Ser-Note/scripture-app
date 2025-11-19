@@ -1197,7 +1197,7 @@
 }
 .verse-of-day h2 {
   font-size: 1.6rem;
-  color: var(--bg-gradient-start);
+  color: var(--text-primary);
   margin-bottom: 10px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -3049,7 +3049,7 @@
 }
 
 .user-email {
-  color: white;
+  color: var(--text-primary);
   font-size: 0.9rem;
   font-weight: 500;
 }
@@ -3102,13 +3102,13 @@
 }
 
 .logout-btn {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  border: 2px solid white;
+  background: transparent;
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
 }
 
 .logout-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--hover-bg);
 }
 
 .login-modal {
@@ -5045,7 +5045,7 @@ table.admin-table tr:hover {
 
 .user-email-small {
   margin: 4px 0 0 0;
-  color: #718096;
+  color: var(--text-primary);
   font-size: 0.9rem;
 }
 
@@ -5398,7 +5398,7 @@ td {
   
   .user-email-small {
     font-size: 0.8rem;
-    color: #718096;
+    color: var(--text-primary);
   }
   
   .user-details {
