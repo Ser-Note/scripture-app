@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '../lib/supabase'
 import { useAuth } from '../contexts/AuthContext'
+import { useNotifications } from '../contexts/NotificationsContext'
 import UserProfile from './UserProfile'
 
 function CommunityView() {
-    const { user, profile, isAdmin } = useAuth()
+  const { user, profile, isAdmin } = useAuth()
+  const { sendNotification } = useNotifications()
     const [submissions, setSubmissions] = useState([])
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
@@ -269,7 +271,7 @@ function CommunityView() {
       }
       
       try {
-        const { error } = await supabase
+        const { data, error } = await supabase
           .from('comments')
           .insert([
             {
@@ -279,9 +281,23 @@ function CommunityView() {
               content: commentText
             }
           ])
-        
+          .select()
+          .single();
         if (error) throw error
-        
+        // Notify post owner
+        const { data: post } = await supabase
+          .from('community')
+          .select('user_id')
+          .eq('id', postId)
+          .single();
+        const postOwnerId = post?.user_id;
+        if (postOwnerId && postOwnerId !== user.id) {
+          await sendNotification({
+            userId: postOwnerId,
+            type: 'comment',
+            data: { commenterId: user.id, postId, commentId: data.id }
+          });
+        }
         // Clear input and refresh comments
         setNewComment(prev => ({ ...prev, [postId]: '' }))
         await fetchComments(postId)

@@ -18,6 +18,7 @@ import Login from './components/Login'
 import InstallPrompt from './components/InstallPrompt'
 import { useAuth } from './contexts/AuthContext'
 import { useTheme } from './contexts/ThemeContext'
+import { useNotifications } from './contexts/NotificationsContext'
 
 function App() {
   // STATE: What data changes in your app?
@@ -27,6 +28,8 @@ function App() {
   const [isLoginOpen, setIsLoginOpen] = useState(false)
   const { user, isAdmin, signOut } = useAuth()
   const { theme, toggleTheme, isDark } = useTheme()
+  const { notifications, loading: notificationsLoading, markAsRead } = useNotifications()
+  const [showNotifications, setShowNotifications] = useState(false)
 
   const [mode, setMode] = useState('questions')
 
@@ -54,7 +57,15 @@ function App() {
   })
 
   return (
-    <div className="app">
+    <div
+      className="app"
+      style={(() => {
+        return {
+          backgroundColor: 'var(--bg)',
+          color: 'var(--text)'
+        };
+      })()}
+    >
       {/* PWA INSTALL PROMPT */}
       <InstallPrompt />
 
@@ -85,6 +96,21 @@ function App() {
             {user ? (
               <>
                 <span className="user-email">{user.email}</span>
+                {/* Bell icon for notifications */}
+                <button
+                  className="notification-bell-btn"
+                  title="Notifications"
+                  onClick={() => setShowNotifications(v => !v)}
+                  style={{ position: 'relative', marginLeft: '10px' }}
+                >
+                  <span style={{ fontSize: '1.6rem' }}>🔔</span>
+                  {/* Unread count badge */}
+                  {notifications && notifications.filter(n => !n.read).length > 0 && (
+                    <span className="notification-badge">
+                      {notifications.filter(n => !n.read).length}
+                    </span>
+                  )}
+                </button>
                 <button onClick={signOut} className="logout-btn">Logout</button>
               </>
             ) : (
@@ -94,6 +120,51 @@ function App() {
             )}
           </div>
         </div>
+        {/* Notification dropdown */}
+        {showNotifications && (
+          <div className="notification-dropdown">
+            <h3>Notifications</h3>
+            {notificationsLoading ? (
+              <div>Loading...</div>
+            ) : notifications.length === 0 ? (
+              <div className="notification-empty">No notifications yet.</div>
+            ) : (
+              <ul className="notification-list">
+                {notifications.slice(0, 10).map(n => {
+                  let message = '';
+                  let displayName = '';
+                  // Try to extract display name for follows
+                  if (n.type === 'follow') {
+                    if (n.data && typeof n.data === 'object' && n.data.display_name) {
+                      displayName = n.data.display_name;
+                    } else {
+                      displayName = 'Someone';
+                    }
+                    message = `${displayName} followed you.`;
+                  } else if (n.type === 'like') {
+                    message = 'Someone liked your post.';
+                  } else if (n.type === 'comment') {
+                    message = 'Someone commented on your post.';
+                  } else if (n.type === 'announcement') {
+                    message = 'New announcement posted.';
+                  } else {
+                    message = n.data && typeof n.data === 'object' ? JSON.stringify(n.data) : n.data;
+                  }
+                  return (
+                    <li key={n.id} className={n.read ? 'notification-item' : 'notification-item unread'}>
+                      <div className="notification-type">{n.type.charAt(0).toUpperCase() + n.type.slice(1)}</div>
+                      <div className="notification-message">{message}</div>
+                      <div className="notification-date">{new Date(n.created_at).toLocaleString()}</div>
+                      {!n.read && (
+                        <button className="mark-read-btn" onClick={() => markAsRead(n.id)}>Mark as read</button>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+          </div>
+        )}
       </header>
 
       <nav className="mode-nav">

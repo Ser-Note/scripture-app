@@ -2,11 +2,13 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import { supabase } from '../lib/supabase';
 import { useAuth } from './AuthContext';
+import { useNotifications } from './NotificationsContext';
 
 const LikesContext = createContext();
 
 export const LikesProvider = ({ children }) => {
   const { user } = useAuth();
+  const { sendNotification } = useNotifications();
   const [likes, setLikes] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -62,6 +64,31 @@ export const LikesProvider = ({ children }) => {
         .single();
       if (error) throw error;
       setLikes(prev => [data, ...prev]);
+      // Send notification to the owner of the item (post or comment)
+      // You need to fetch the owner from the DB
+      let ownerId = null;
+      if (itemType === 'post') {
+        const { data: post } = await supabase
+          .from('community')
+          .select('user_id')
+          .eq('id', itemId)
+          .single();
+        ownerId = post?.user_id;
+      } else if (itemType === 'comment') {
+        const { data: comment } = await supabase
+          .from('comments')
+          .select('user_id')
+          .eq('id', itemId)
+          .single();
+        ownerId = comment?.user_id;
+      }
+      if (ownerId && ownerId !== user.id) {
+        await sendNotification({
+          userId: ownerId,
+          type: 'like',
+          data: { likerId: user.id, itemType, itemId }
+        });
+      }
       return { data, error: null };
     } catch (err) {
       return { data: null, error: err.message };

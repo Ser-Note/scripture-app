@@ -5,32 +5,25 @@ const ThemeContext = createContext()
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
-    // Check localStorage or default to 'light'
     const saved = localStorage.getItem('scriptureAppTheme')
-    return saved || 'light'
+    return saved || 'default'
   })
 
   useEffect(() => {
-    // Apply theme to document
     document.documentElement.setAttribute('data-theme', theme)
-    // Save to localStorage
     localStorage.setItem('scriptureAppTheme', theme)
   }, [theme])
 
-  const toggleTheme = () => {
-    setTheme(prev => prev === 'light' ? 'dark' : 'light')
-  }
-
-  const setLightTheme = () => setTheme('light')
-  const setDarkTheme = () => setTheme('dark')
+  const setThemeByName = (name) => setTheme(name)
 
   return (
     <ThemeContext.Provider value={{
       theme,
-      toggleTheme,
-      setLightTheme,
-      setDarkTheme,
-      isDark: theme === 'dark'
+      setTheme: setThemeByName,
+      isDark: theme === 'dark',
+      isChristmas: theme === 'christmas',
+      isThanksgiving: theme === 'thanksgiving',
+      isEaster: theme === 'easter',
     }}>
       {children}
     </ThemeContext.Provider>

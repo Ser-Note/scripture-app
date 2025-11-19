@@ -7,6 +7,8 @@ import { BookmarksProvider } from './contexts/BookmarksContext'
 import { ThemeProvider } from './contexts/ThemeContext'
 import { LikesProvider } from './contexts/LikesContext'
 import { AnnouncementsProvider } from './contexts/AnnouncementsContext'
+import { FollowProvider } from './contexts/FollowContext'
+import { NotificationsProvider } from './contexts/NotificationsContext'
 
 // Register Service Worker for PWA functionality
 if ('serviceWorker' in navigator) {
@@ -29,16 +31,20 @@ if ('serviceWorker' in navigator) {
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ThemeProvider>
-      <AuthProvider>
-        <BookmarksProvider>
-          <LikesProvider>
-            <AnnouncementsProvider>
-              <App />
-            </AnnouncementsProvider>
-          </LikesProvider>
-        </BookmarksProvider>
-      </AuthProvider>
-    </ThemeProvider>
-  </React.StrictMode>,
+    <AuthProvider>
+      <NotificationsProvider>
+        <ThemeProvider>
+          <BookmarksProvider>
+            <LikesProvider>
+              <AnnouncementsProvider>
+                <FollowProvider>
+                  <App />
+                </FollowProvider>
+              </AnnouncementsProvider>
+            </LikesProvider>
+          </BookmarksProvider>
+        </ThemeProvider>
+      </NotificationsProvider>
+    </AuthProvider>
+  </React.StrictMode>
 )

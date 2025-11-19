@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '../lib/supabase'
 import { useAuth } from '../contexts/AuthContext'
+import { useFollow } from '../contexts/FollowContext'
 
 function UserProfile({ userId, onClose }) {
   const { user: currentUser } = useAuth()
+  const { following, followUser, unfollowUser, loading: followLoading } = useFollow()
   const [profile, setProfile] = useState(null)
   const [loading, setLoading] = useState(true)
   const [posts, setPosts] = useState([])
@@ -77,12 +79,12 @@ function UserProfile({ userId, onClose }) {
   }
 
   const isOwnProfile = currentUser?.id === userId
+  const isFollowing = following.includes(userId)
 
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="user-profile-modal" onClick={(e) => e.stopPropagation()}>
         <button className="close-btn" onClick={onClose}>✕</button>
-        
         <div className="user-profile-header">
           <div className="user-profile-avatar-large">
             {profile.avatar_url ? (
@@ -98,6 +100,16 @@ function UserProfile({ userId, onClose }) {
             <span className="role-badge admin">👑 Admin</span>
           )}
           {isOwnProfile && <p className="own-profile-note">This is you!</p>}
+          {/* Follow/Unfollow button */}
+          {!isOwnProfile && (
+            <button
+              className="follow-btn"
+              disabled={followLoading}
+              onClick={() => isFollowing ? unfollowUser(userId) : followUser(userId)}
+            >
+              {isFollowing ? 'Unfollow' : 'Follow'}
+            </button>
+          )}
         </div>
 
         <div className="user-profile-content">

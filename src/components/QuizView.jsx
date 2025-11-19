@@ -88,35 +88,33 @@ const handleRestart = () => {
                 })
               }
               return (
-                <button
-                  key={index}
-                  className={`quiz-option ${
-                    selectedAnswer === index 
-                      ? option.correct 
-                        ? 'correct' 
-                        : 'incorrect'
-                      : ''
-                  }`}
-                  onClick={() => handleAnswerClick(index, option.correct)}
-                  disabled={selectedAnswer !== null}
-                  style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
-                >
-                  <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
-                    <div className="option-reference">{option.reference}</div>
-                    <div className="option-text">{option.simplified}</div>
-                  </div>
-                  <span style={{ display: 'flex', alignItems: 'center' }}>
-                    <button
-                      className="favorite-btn"
-                      onClick={e => { e.stopPropagation(); handleToggleBookmark(e); }}
-                      title={bookmarked ? 'Remove bookmark' : 'Bookmark this verse'}
-                      tabIndex={-1}
-                      style={{ marginLeft: '12px', fontSize: '1.3em' }}
-                    >
-                      {bookmarked ? '★' : '☆'}
-                    </button>
-                  </span>
-                </button>
+                <div key={index} className="quiz-option-row" style={{ display: 'flex', alignItems: 'center', gap: '10px', width: '100%' }}>
+                  <button
+                    className={`quiz-option ${
+                      selectedAnswer === index 
+                        ? option.correct 
+                          ? 'correct' 
+                          : 'incorrect'
+                        : ''
+                    }`}
+                    onClick={() => handleAnswerClick(index, option.correct)}
+                    disabled={selectedAnswer !== null}
+                    style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
+                  >
+                    <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+                      <div className="option-reference">{option.reference}</div>
+                      <div className="option-text">{option.simplified}</div>
+                    </div>
+                  </button>
+                  <button
+                    className="favorite-btn"
+                    onClick={handleToggleBookmark}
+                    title={bookmarked ? 'Remove bookmark' : 'Bookmark this verse'}
+                    style={{ marginLeft: '12px', fontSize: '1.3em' }}
+                  >
+                    {bookmarked ? '★' : '☆'}
+                  </button>
+                </div>
               )
             })}
             </div>

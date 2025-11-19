@@ -1,6 +1,5 @@
-import { createContext, useContext, useEffect, useState } from 'react'
-import { supabase } from '../lib/supabase'
-
+import { createContext, useContext, useEffect, useState } from 'react';
+import { supabase } from '../lib/supabase';
 const AuthContext = createContext()
 
 export const AuthProvider = ({ children }) => {
@@ -37,7 +36,6 @@ export const AuthProvider = ({ children }) => {
       .select('*')
       .eq('id', userId)
       .single()
-    
     setProfile(data)
   }
 
@@ -82,7 +80,7 @@ export const AuthProvider = ({ children }) => {
     }}>
       {children}
     </AuthContext.Provider>
-  )
+  );
 }
 
 export const useAuth = () => {
