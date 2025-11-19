@@ -173,7 +173,7 @@ function Profile() {
               <div className="profile-stat">
                 <span className="stat-label">Followers:</span>
                 <span className="stat-value profile-followers-link" style={{ cursor: 'pointer', color: 'var(--primary)', textDecoration: 'underline' }} onClick={() => setShowFollowers(true)}>
-                  {typeof profile?.follower_count === 'number' ? profile.follower_count : 0}
+                  {typeof profile?.followers_count === 'number' ? profile.followers_count : 0}
                 </span>
               </div>
             </div>
