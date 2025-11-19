@@ -99,6 +99,31 @@ function UserProfile({ userId, onClose }) {
           {profile.role === 'admin' && (
             <span className="role-badge admin">👑 Admin</span>
           )}
+          <div className="profile-social-links" style={{ marginTop: 12 }}>
+            {profile.twitter && (
+              <a href={`https://twitter.com/${profile.twitter}`} target="_blank" rel="noopener noreferrer" className="social-badge twitter">🐦 Twitter</a>
+            )}
+            {profile.github && (
+              <a href={`https://github.com/${profile.github}`} target="_blank" rel="noopener noreferrer" className="social-badge github">💻 GitHub</a>
+            )}
+            {profile.website && (
+              <a href={profile.website} target="_blank" rel="noopener noreferrer" className="social-badge website">🌐 Website</a>
+            )}
+          </div>
+          <div className="stats-grid">
+            <div className="stat-item">
+              <span className="stat-value" title="Posts">📝 {posts.length}</span>
+              <span className="stat-label">Posts</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-value" title="Comments">💬 {comments.length}</span>
+              <span className="stat-label">Comments</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-value" title="Followers">👥 {profile.followers_count ?? 0}</span>
+              <span className="stat-label">Followers</span>
+            </div>
+          </div>
           {isOwnProfile && <p className="own-profile-note">This is you!</p>}
           {/* Follow/Unfollow button */}
           {!isOwnProfile && (
@@ -119,16 +144,8 @@ function UserProfile({ userId, onClose }) {
           </div>
 
           <div className="user-profile-section">
-            <h3>📊 Activity Stats</h3>
+            <h3>📊 Joined</h3>
             <div className="stats-grid">
-              <div className="stat-item">
-                <span className="stat-value">{posts.length}</span>
-                <span className="stat-label">Posts</span>
-              </div>
-              <div className="stat-item">
-                <span className="stat-value">{comments.length}</span>
-                <span className="stat-label">Comments</span>
-              </div>
               <div className="stat-item">
                 <span className="stat-value">
                   {new Date(profile.created_at).toLocaleDateString('en-US', { 

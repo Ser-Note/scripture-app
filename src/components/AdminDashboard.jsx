@@ -10,6 +10,8 @@ function AdminDashboard() {
   const [loading, setLoading] = useState(true)
   const [message, setMessage] = useState('')
   const [selectedUserId, setSelectedUserId] = useState(null)
+  const [query, setQuery] = useState('')
+  const [selectedIds, setSelectedIds] = useState([])
 
   useEffect(() => {
     if (isAdmin) {
@@ -48,6 +50,64 @@ function AdminDashboard() {
       setPendingUsers(data || [])
     } catch (err) {
       console.error('Error fetching pending users:', err)
+    }
+  }
+
+  const toggleSelect = (id) => {
+    setSelectedIds(prev => prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id])
+  }
+
+  const selectAllVisible = (visible) => {
+    const visibleIds = visible.map(u => u.id)
+    const allSelected = visibleIds.every(id => selectedIds.includes(id))
+    setSelectedIds(allSelected ? [] : visibleIds)
+  }
+
+  const exportSelectedCSV = () => {
+    if (!selectedIds.length) return
+    const rows = users.filter(u => selectedIds.includes(u.id)).map(u => ({
+      name: u.display_name || '',
+      email: u.email || '',
+      role: u.role || '',
+      joined: new Date(u.created_at).toLocaleDateString()
+    }))
+    const csv = [Object.keys(rows[0]).join(','), ...rows.map(r => Object.values(r).map(v=>`"${String(v).replace(/"/g,'""')}"`).join(','))].join('\n')
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = `selected-users-${Date.now()}.csv`
+    a.click()
+    URL.revokeObjectURL(url)
+  }
+
+  const bulkMakeAdmin = async () => {
+    if (!selectedIds.length) return
+    try {
+      setMessage('⏳ Updating roles for selected users...')
+      await Promise.all(selectedIds.map(id => updateUserRole(id, 'admin')))
+      setSelectedIds([])
+      setMessage('✅ Updated roles for selected users')
+      fetchAllUsers()
+    } catch (err) {
+      console.error(err)
+      setMessage('❌ Failed to update roles for some users')
+    }
+  }
+
+  const bulkDeleteUsers = async () => {
+    if (!selectedIds.length) return
+    if (!confirm(`Are you sure you want to delete ${selectedIds.length} users? This action cannot be undone.`)) return
+    try {
+      setMessage('⏳ Deleting selected users...')
+      await Promise.all(selectedIds.map(id => supabase.functions.invoke('delete-user', { body: { userId: id } })))
+      setSelectedIds([])
+      setMessage('✅ Deleted selected users')
+      fetchAllUsers()
+      fetchPendingUsers()
+    } catch (err) {
+      console.error(err)
+      setMessage('❌ Failed to delete some users')
     }
   }
 
@@ -116,6 +176,12 @@ function AdminDashboard() {
       </div>
     )
   }
+
+  const visibleUsers = users.filter(u => {
+    if (!query) return true
+    const q = query.toLowerCase()
+    return (u.display_name || '').toLowerCase().includes(q) || (u.email || '').toLowerCase().includes(q)
+  })
 
   if (loading) {
     return (
@@ -201,12 +267,39 @@ function AdminDashboard() {
         <div className="admin-section">
           <h2>👥 All Users ({users.length})</h2>
           <p className="section-description">Manage user roles and access</p>
+          <div className="admin-filter-bar">
+            <input
+              className="admin-search-input"
+              type="search"
+              placeholder="Search users by name or email..."
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              aria-label="Search users"
+            />
+          </div>
+          {selectedIds.length > 0 && (
+            <div className="bulk-toolbar" role="toolbar" aria-label="Bulk actions">
+              <div style={{ fontWeight: 600 }}>{selectedIds.length} selected</div>
+              <div style={{ flex: 1 }} />
+              <button className="action-btn" onClick={exportSelectedCSV} title="Export selected">📁 Export</button>
+              <button className="action-btn" onClick={bulkMakeAdmin} title="Make admin">👑 Make Admin</button>
+              <button className="action-btn delete" onClick={bulkDeleteUsers} title="Delete selected">🗑️ Delete</button>
+            </div>
+          )}
           
           {/* Desktop Table View */}
           <div className="users-table">
-            <table>
+            <table className="admin-table">
               <thead>
                 <tr>
+                  <th style={{ width: 46 }}>
+                    <input
+                      type="checkbox"
+                      aria-label="Select all visible users"
+                      checked={visibleUsers.length > 0 && visibleUsers.every(u => selectedIds.includes(u.id))}
+                      onChange={() => selectAllVisible(visibleUsers)}
+                    />
+                  </th>
                   <th>User</th>
                   <th>Email</th>
                   <th>Role</th>
@@ -215,8 +308,16 @@ function AdminDashboard() {
                 </tr>
               </thead>
               <tbody>
-                {users.map(usr => (
+                {visibleUsers.map(usr => (
                   <tr key={usr.id}>
+                    <td>
+                      <input
+                        type="checkbox"
+                        aria-label={`Select user ${usr.email}`}
+                        checked={selectedIds.includes(usr.id)}
+                        onChange={() => toggleSelect(usr.id)}
+                      />
+                    </td>
                     <td>
                       <div className="table-user">
                         {usr.avatar_url ? (
@@ -299,9 +400,17 @@ function AdminDashboard() {
 
           {/* Mobile Card View */}
           <div className="users-mobile-cards">
-            {users.map(usr => (
+            {visibleUsers.map(usr => (
               <div key={usr.id} className="user-card">
                 <div className="user-card-header">
+                  <div style={{ marginRight: 8 }}>
+                    <input
+                      type="checkbox"
+                      aria-label={`Select user ${usr.email}`}
+                      checked={selectedIds.includes(usr.id)}
+                      onChange={() => toggleSelect(usr.id)}
+                    />
+                  </div>
                   <div className="user-avatar-small">
                     {usr.avatar_url ? (
                       <img src={usr.avatar_url} alt="" />
