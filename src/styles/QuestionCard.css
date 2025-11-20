@@ -1,0 +1,110 @@
+/* Styles extracted from App.css for the QuestionCard component */
+
+/* QUESTION CARD */
+.question-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 4px var(--shadow);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s, border-color 0.3s;
+}
+
+.question-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.question-header {
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--hover-bg);
+  color: var(--text-primary);
+  transition: background 0.3s, color 0.3s;
+}
+
+.question-header:hover {
+  background: var(--card-bg);
+  color: var(--primary);
+}
+
+.question-header h3 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.toggle-icon {
+  font-size: 1.2rem;
+  color: #667eea;
+  margin-left: 15px;
+}
+
+/* QUESTION CONTENT */
+.question-content {
+  padding: 20px;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-primary);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.answer {
+  margin-bottom: 25px;
+}
+
+.answer h4,
+.scriptures h4 {
+  color: var(--accent);
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.answer p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* SCRIPTURE VERSES */
+.scriptures {
+  background: var(--hover-bg);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary);
+}
+
+.scripture-verse {
+  margin-bottom: 15px;
+}
+
+.scripture-verse:last-child {
+  margin-bottom: 0;
+}
+
+.scripture-verse strong {
+  display: block;
+  color: var(--accent);
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.scripture-verse p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-style: italic;
+  padding-left: 10px;
+}

@@ -21,6 +21,14 @@
     <link rel="icon" type="image/png" href="/AppImages/favicon.png" />
     
     <title>Scripture Learning App</title>
+    <script>
+      // Lightweight analytics dataLayer stub (used by Profiles instrumentation)
+      window.dataLayer = window.dataLayer || [];
+      // Example helper to push events safely
+      window.pushEvent = function (name, payload) {
+        try { window.dataLayer.push(Object.assign({ event: name }, payload || {})); } catch (e) { console.log('pushEvent', name, payload); }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

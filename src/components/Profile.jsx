@@ -178,6 +178,14 @@ function Profile() {
               </div>
             </div>
           </div>
+          {/* Show edit button when viewing your own profile */}
+          {user?.id === profile?.id && !isEditing && (
+            <div className="profile-actions" style={{ marginTop: 12 }}>
+              <button className="edit-btn" onClick={() => setIsEditing(true)}>
+                Edit Profile
+              </button>
+            </div>
+          )}
           {showFollowers && (
             <div className="followers-modal">
               <div className="followers-modal-content">

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { supabase } from '../lib/supabase'
 import { useAuth } from '../contexts/AuthContext'
 import { useFollow } from '../contexts/FollowContext'
+import '../styles/UserProfile.css'
 
 function UserProfile({ userId, onClose }) {
   const { user: currentUser } = useAuth()

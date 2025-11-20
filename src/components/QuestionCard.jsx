@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import '../styles/QuestionCard.css'
 import { useBookmarks } from '../contexts/BookmarksContext'
 import LikeButton from './LikeButton'
 

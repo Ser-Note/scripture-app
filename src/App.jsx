@@ -11,6 +11,7 @@ import MemoryGame from './components/MemoryGame'
 import DissectionView from './components/DissectionView'
 import CommunityView from './components/Community.jsx'
 import Profile from './components/Profile'
+import Profiles from './components/Profiles'
 import AdminDashboard from './components/AdminDashboard'
 import Announcements from './components/Announcements'
 import Bookmarks from './components/Bookmarks'
@@ -211,6 +212,12 @@ function App() {
           👤 Profile
         </button>
         <button
+          className={mode === 'profiles' ? 'mode-btn active' : 'mode-btn'}
+          onClick={() => setMode('profiles')}
+        >
+          🧑‍🤝‍🧑 Profiles
+        </button>
+        <button
           className={mode === 'announcements' ? 'mode-btn active' : 'mode-btn'}
           onClick={() => setMode('announcements')}
         >
@@ -276,6 +283,10 @@ function App() {
 
       {mode === 'bookmarks' && (
         <Bookmarks />
+      )}
+
+      {mode === 'profiles' && (
+        <Profiles />
       )}
 
       {mode === 'profile' && (

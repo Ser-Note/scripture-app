@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useAuth } from '../contexts/AuthContext'
 import { supabase } from '../lib/supabase'
 import UserProfile from './UserProfile'
+import '../styles/AdminDashboard.css'
 
 function AdminDashboard() {
   const { user, profile, isAdmin } = useAuth()
@@ -100,7 +101,34 @@ function AdminDashboard() {
     if (!confirm(`Are you sure you want to delete ${selectedIds.length} users? This action cannot be undone.`)) return
     try {
       setMessage('⏳ Deleting selected users...')
-      await Promise.all(selectedIds.map(id => supabase.functions.invoke('delete-user', { body: { userId: id } })))
+      await Promise.all(selectedIds.map(async id => {
+        try {
+          await supabase.functions.invoke('delete-user', { body: { userId: id } })
+        } catch (err) {
+          console.error('delete-user error for', id, err)
+          // Try fetching server response body for more details
+          try {
+            const url = `${import.meta.env.VITE_SUPABASE_URL.replace(/\/$/, '')}/functions/v1/delete-user`
+            // Try to include the logged-in user's access token so the function can verify admin role
+            const { data: { session } = {} } = await supabase.auth.getSession()
+            const bearer = session?.access_token
+            const res = await fetch(url, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'apikey': import.meta.env.VITE_SUPABASE_KEY,
+                'Authorization': bearer ? `Bearer ${bearer}` : `Bearer ${import.meta.env.VITE_SUPABASE_KEY}`
+              },
+              body: JSON.stringify({ userId: id })
+            })
+            const text = await res.text()
+            console.error('Fallback fetch response:', res.status, text)
+          } catch (fetchErr) {
+            console.error('Fallback fetch failed', fetchErr)
+          }
+          throw err
+        }
+      }))
       setSelectedIds([])
       setMessage('✅ Deleted selected users')
       fetchAllUsers()
@@ -139,15 +167,41 @@ function AdminDashboard() {
     try {
       // Call the Edge Function to delete user from auth.users
       // This will cascade to profiles, community, and comments tables
-      const { data, error } = await supabase.functions.invoke('delete-user', {
-        body: { userId }
-      })
-
-      if (error) throw error
-
-      setMessage('✅ User completely deleted from system')
-      fetchAllUsers()
-      fetchPendingUsers()
+      // Use the SDK invoke and capture errors; if the SDK throws on non-2xx,
+      // fall back to a plain fetch to surface the response body for debugging.
+      try {
+        const { data, error } = await supabase.functions.invoke('delete-user', { body: { userId } })
+        if (error) throw error
+        setMessage('✅ User completely deleted from system')
+        fetchAllUsers()
+        fetchPendingUsers()
+        return
+      } catch (err) {
+        console.error('Functions invoke failed:', err)
+        // Fallback: call the function endpoint directly to read response text
+        try {
+          const url = `${import.meta.env.VITE_SUPABASE_URL.replace(/\/$/, '')}/functions/v1/delete-user`
+          // Include the current user's access token if available so the function can validate admin role
+          const { data: { session } = {} } = await supabase.auth.getSession()
+          const bearer = session?.access_token
+          const resp = await fetch(url, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'apikey': import.meta.env.VITE_SUPABASE_KEY,
+              'Authorization': bearer ? `Bearer ${bearer}` : `Bearer ${import.meta.env.VITE_SUPABASE_KEY}`
+            },
+            body: JSON.stringify({ userId })
+          })
+          const text = await resp.text()
+          console.error('Direct function response', resp.status, text)
+          setMessage(`❌ Failed to delete user: ${resp.status} ${text}`)
+        } catch (fetchErr) {
+          console.error('Fallback fetch failed', fetchErr)
+          setMessage('❌ Failed to delete user: unknown error (see console)')
+        }
+        return
+      }
     } catch (err) {
       console.error('Error deleting user:', err)
       setMessage('❌ Failed to delete user: ' + err.message)

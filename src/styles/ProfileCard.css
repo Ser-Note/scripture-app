@@ -1,0 +1,111 @@
+/* ProfileCard specific styles (extracted from App.css / Profiles.css) */
+
+.profile-card {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 12px;
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+  cursor: pointer;
+  min-height: 96px;
+}
+.profile-card:focus,
+.profile-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--elevation);
+  border-color: rgba(37,99,235,0.12);
+  outline: none;
+}
+.profile-card:focus-visible { outline: 3px solid rgba(37,99,235,0.12); outline-offset: 2px }
+.profile-card-avatar {
+  width: 72px;
+  height: 72px;
+  min-width: 72px;
+  border-radius: 999px;
+  overflow: visible; /* allow caption below avatar to be visible */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.01));
+  flex-shrink: 0;
+  position: relative;
+}
+.profile-card-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.profile-card-avatar-fallback {
+  font-weight: 600;
+  font-size: 28px;
+  color: var(--muted);
+}
+.profile-card-avatar-name {
+  display: none; /* shown only in grid context via parent selector below */
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-primary);
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 72px; /* keep caption within avatar width so it won't overlap actions */
+}
+.profile-card-avatar:focus-within { box-shadow: 0 0 0 4px rgba(37,99,235,0.08); border-radius: 999px }
+.profile-card-content { flex: 1; display: flex; flex-direction: column; justify-content: space-between }
+.profile-card-title { display: flex; align-items: center; justify-content: space-between; gap: 8px }
+.profile-card-name { font-weight: 600; color: #0f172a; font-size: 15px; line-height: 1.1 }
+.profile-card-followers { color: var(--muted); font-size: 13px; background: rgba(99,102,241,0.06); padding: 4px 8px; border-radius: 999px; display:inline-flex; align-items:center; gap:6px }
+.profile-card-bio { color: #334155; font-size: 13px; margin-top: 6px; opacity: .95 }
+.profile-card-actions { display: flex; gap: 8px; align-items: center; margin-top: 10px }
+.profile-card .action-btn { background: transparent; border: 1px solid rgba(15,23,42,0.06); padding: 6px 10px; font-size: 13px; border-radius: 8px; cursor: pointer }
+.profile-card .preview-btn {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--hover-bg);
+  border: 1px solid var(--border-color);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .12s ease, background .12s ease;
+}
+.profile-card .preview-btn:hover { transform: translateY(-2px); background: linear-gradient(90deg, rgba(0,0,0,0.02), rgba(0,0,0,0.04)); }
+
+.follow-btn { background: var(--accent); color: white; border: none; padding: 8px 12px; border-radius: 10px; transition: background-color .12s ease, transform .08s ease; font-weight:600 }
+.follow-btn.small { padding: 6px 10px; font-size: 13px }
+.follow-btn.following { background: transparent; color: var(--accent); border: 1px solid rgba(37,99,235,0.18) }
+.follow-btn:active { transform: scale(.98) }
+
+/* compact adjustments for small screens */
+@media (max-width: 700px) {
+  .profile-card { padding: 10px }
+  .profile-card-avatar { width: 56px; height: 56px }
+}
+
+/* Show avatar name when cards are in the grid view for clarity */
+.profiles-grid .profile-card .profile-card-avatar-name { display: block }
+.profiles-list-virtual .profile-card .profile-card-avatar-name,
+.profiles-list .profile-card .profile-card-avatar-name { display: none }
+
+/* Avatar wrapper: stack avatar + caption vertically and center them */
+.profile-card-avatar-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 72px;
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+
+@media (max-width: 700px) {
+  .profile-card { padding: 10px }
+  .profile-card-avatar { width: 56px; height: 56px; border-radius: 10px }
+}

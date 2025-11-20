@@ -1,0 +1,55 @@
+/* Styles for quick preview modal */
+.quick-preview-backdrop {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+  background: rgba(2,6,23,0.45);
+  padding: 24px;
+}
+
+.quick-preview {
+  width: 420px;
+  max-width: 95%;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 20px 60px rgba(2,6,23,0.4);
+  transform: translateY(6px);
+  animation: qp-pop .12s ease forwards;
+}
+
+@keyframes qp-pop { to { transform: translateY(0); } }
+
+.quick-preview-header { display:flex; justify-content:space-between; align-items:center; gap:12px }
+.quick-preview-title { font-weight:700; font-size:18px; color: #0f172a }
+.quick-preview-close { background: transparent; border: none; font-size:18px; cursor: pointer; padding:6px 8px; border-radius:8px; transition: background .12s }
+.quick-preview-close:hover { background: var(--hover-bg) }
+
+.quick-preview-body { margin-top:12px; display:flex; gap:14px; align-items:flex-start }
+.quick-preview-avatar { width:96px; height:96px; border-radius:999px; overflow:hidden; background: var(--border-color); flex-shrink:0; display:flex; align-items:center; justify-content:center }
+.quick-preview-avatar img { width:100%; height:100%; object-fit:cover; display:block }
+
+.quick-preview-meta { flex:1 }
+.quick-preview-bio { color: var(--text-secondary); font-size:14px; line-height:1.3; min-height:48px }
+.quick-preview-followers { margin-top:8px; color: var(--muted); display:flex; gap:8px; align-items:center; font-size:14px }
+
+.quick-preview-actions { margin-top:12px; display:flex; gap:8px }
+.quick-preview-actions button { padding:8px 12px; border-radius:10px; border:none; cursor:pointer; font-weight:600 }
+.quick-preview-actions .follow { background: var(--accent); color:#fff }
+.quick-preview-actions .open { background:transparent; border:1px solid var(--border-color); color:var(--text-primary) }
+
+@media (max-width: 480px) {
+  .quick-preview { width: 100%; padding:12px }
+  .quick-preview-body { flex-direction:column; align-items:center }
+  .quick-preview-meta { text-align:center }
+  .quick-preview-actions { justify-content:center }
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .quick-preview { animation: none; transform: none }
+}

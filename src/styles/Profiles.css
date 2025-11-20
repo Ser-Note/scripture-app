@@ -1,0 +1,226 @@
+.profiles-view {
+  padding: 18px 12px 36px 12px;
+  margin: 0 auto 40px auto;
+  max-width: 1100px;
+}
+
+/* UI variables for easy theming */
+:root {
+  --profiles-gap: 18px;
+  --profile-card-width: 240px;
+  --accent: #2563eb;
+  --primary: var(--accent);
+  --muted: #6b7280;
+  --card-bg: var(--bg, #fff);
+  --card-border: rgba(16,24,40,0.06);
+  --border-color: var(--card-border);
+  --radius: 12px;
+  --elevation: 0 6px 18px rgba(16,24,40,0.06);
+  --hover-bg: rgba(0,0,0,0.03);
+}
+.profiles-header { display:flex; justify-content:space-between; gap:12px; align-items:center; margin-bottom:16px }
+.profiles-title { margin:0; font-size:1.4rem; font-weight:700; color:var(--primary) }
+.profiles-controls { display:flex; gap:10px; align-items:center }
+.profiles-controls .search-input { min-width:220px; max-width:420px }
+.profiles-controls .profiles-sort select { padding:6px 8px; border-radius:8px; border:1px solid var(--border-color); background:var(--card-bg) }
+.profiles-filter { display:inline-flex; gap:6px; align-items:center; color:var(--text-secondary); font-size:0.95rem }
+.view-toggle .mode-btn { padding:8px 10px; border-radius:8px; border:1px solid var(--border-color); background:var(--card-bg); cursor:pointer }
+.view-toggle .mode-btn.active { background:var(--primary); color:var(--text-on-gradient) }
+
+/* Toggle switch style for has-avatar / has-bio inputs */
+.profiles-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.profiles-filter input[type="checkbox"] {
+  /* hide native checkbox but keep it accessible */
+  appearance: none;
+  -webkit-appearance: none;
+  width: 44px;
+  height: 24px;
+  border-radius: 999px;
+  background: rgba(15,23,42,0.06);
+  border: 1px solid var(--border-color);
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  transition: background-color .14s ease, border-color .14s ease;
+}
+.profiles-filter input[type="checkbox"]::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(2,6,23,0.12);
+  transition: transform .14s ease, background-color .14s ease;
+}
+.profiles-filter input[type="checkbox"]:checked {
+  background: linear-gradient(90deg, var(--accent), #1e40af);
+  border-color: rgba(37,99,235,0.16);
+}
+.profiles-filter input[type="checkbox"]:checked::after {
+  transform: translateX(20px);
+}
+.profiles-filter input[type="checkbox"]:focus {
+  outline: 3px solid rgba(37,99,235,0.12);
+  outline-offset: 2px;
+}
+
+/* Small label text spacing */
+.profiles-filter span { font-size: 0.95rem; color: var(--text-secondary) }
+
+/* Improve sort dropdown visuals */
+.profiles-controls .profiles-sort {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.profiles-controls .profiles-sort select {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: linear-gradient(180deg, var(--card-bg), #fbfbfb);
+  box-shadow: 0 4px 12px rgba(2,6,23,0.04);
+  cursor: pointer;
+  min-width: 150px;
+}
+.profiles-controls .profiles-sort select:focus {
+  outline: 3px solid rgba(37,99,235,0.12);
+  outline-offset: 2px;
+}
+
+/* Tighter spacing on small screens */
+@media (max-width: 520px) {
+  .profiles-controls { gap: 8px }
+  .profiles-controls .profiles-sort select { min-width: 120px }
+  .profiles-controls .search-input { min-width: 140px }
+}
+
+.profiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--profile-card-width), 1fr));
+  gap: var(--profiles-gap);
+}
+.profiles-list-virtual, .profiles-list { display:flex; flex-direction:column; gap:12px }
+
+/* ProfileCard styles moved to `ProfileCard.css` */
+
+.profiles-loading { opacity:0.95 }
+.profile-skeleton {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border-radius: var(--radius);
+  background: linear-gradient(180deg,#fff,#fff);
+}
+.skeleton-avatar { width:72px; height:72px; border-radius:999px; background:#eef2ff; }
+.skeleton-lines { flex:1; display:flex; flex-direction:column; gap:8px }
+.skeleton-line { height:12px; background:linear-gradient(90deg,#f3f4f6,#eef2ff,#f3f4f6); background-size:200% 100%; border-radius:6px; animation: shimmer 1.6s linear infinite; }
+.skeleton-line.short { width:30%; }
+.skeleton-line.long { width:70%; }
+
+@keyframes shimmer { 0% { background-position: -200% 0 } 100% { background-position: 200% 0 } }
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-card, .follow-btn { transition: none; }
+  .skeleton-line { animation: none; background: #f3f4f6; }
+}
+
+.profiles-footer { display:flex; justify-content:space-between; align-items:center; margin-top:18px; gap:8px }
+.profiles-paging-controls { display:flex; gap:8px }
+
+@media (max-width: 700px) {
+  .profiles-controls { flex-wrap: wrap; justify-content: flex-end }
+  .profiles-title { font-size: 1.2rem }
+}
+
+/* Enhanced Profiles UI: buttons, badges, hover states */
+.profiles-view .profile-card {
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  padding: 14px;
+}
+.profiles-view .profile-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(2,6,23,0.08);
+  border-color: rgba(102,126,234,0.14);
+}
+
+/* Avatar ring when image exists */
+.profiles-view .profile-card-avatar img {
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(102,126,234,0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.profiles-view .profile-card-avatar img:hover { transform: scale(1.03); box-shadow: 0 12px 30px rgba(102,126,234,0.12); }
+
+/* Name row: make room for badges */
+.profiles-view .profile-card-title { align-items: center; gap: 10px }
+
+/* Action buttons styling (View) */
+.profiles-view .profile-card .action-btn {
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(0,0,0,0.01));
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.04);
+}
+.profiles-view .profile-card .action-btn:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary);
+}
+
+/* Follow button: stronger visual weight */
+.profiles-view .profile-card .follow-btn.small {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg,var(--primary),var(--accent));
+  color: var(--text-on-gradient);
+  border: none;
+  box-shadow: 0 8px 20px rgba(102,126,234,0.12);
+}
+.profiles-view .profile-card .follow-btn.small.following {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  box-shadow: none;
+}
+.profiles-view .profile-card .follow-btn.small:active { transform: scale(0.98) }
+
+/* Preview / info small icon button */
+.profiles-view .profile-card .preview-btn {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--hover-bg);
+  border: 1px solid var(--border-color);
+  font-weight: 700;
+}
+.profiles-view .profile-card .preview-btn:hover {
+  background: linear-gradient(90deg, rgba(0,0,0,0.02), rgba(0,0,0,0.04));
+  transform: translateY(-2px);
+}
+
+/* Small badges indicating avatar/bio presence (styled for future markup) */
+.profiles-view .presence-badges { display:flex; gap:6px; align-items:center }
+.profiles-view .presence-badges .badge { font-size:0.75rem; padding:4px 8px; border-radius:999px; background:var(--hover-bg); color:var(--text-primary); border:1px solid var(--border-color); }
+.profiles-view .presence-badges .badge.avatar { background: linear-gradient(90deg,#dbeafe,#bfdbfe); color:#1e3a8a }
+.profiles-view .presence-badges .badge.bio { background: linear-gradient(90deg,#dcfce7,#bbf7d0); color:#065f46 }
+
+/* Reflow actions on small screens */
+@media (max-width: 520px) {
+  .profiles-view .profile-card { flex-direction: row; align-items: center; gap: 12px }
+  .profiles-view .profile-card .profile-card-actions { margin-left: auto; gap: 6px }
+}
